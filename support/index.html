@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support · Jarvis Studios</title>
 <meta name="description" content="Contact Jarvis Studios and get help with our games, including how to delete your data.">
-<meta name="theme-color" content="#fff8e6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f252b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fff6e4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10232a" media="(prefers-color-scheme: dark)">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon.ico" sizes="32x32">
@@ -15,18 +15,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Grandstander:wght@700;800;900&family=Ultra&display=swap">
 <link rel="stylesheet" href="../assets/css/site.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
-<div class="wrap">
+<div class="wrap header-row">
 <a class="wordmark" href="../" aria-label="Jarvis Studios, home"><span class="wm-top" aria-hidden="true">JARVIS</span><span class="wm-bottom" aria-hidden="true">STUDIOS</span></a>
-<nav class="site-nav" aria-label="Main">
-<ul>
-<li><a href="../">Home</a></li>
-<li><a href="../games/">Games</a></li>
-<li><a href="../support/" aria-current="page">Support</a></li>
-<li><a href="../legal/">Legal</a></li>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span></button>
+<nav class="site-nav" id="site-nav" aria-label="Main">
+<ul class="nav-list">
+<li class="has-sub"><button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="games-menu">Games<svg class="chev" viewBox="0 0 12 8" width="12" height="8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="sub" id="games-menu"><li><a href="../turnstone/"><span class="sub-name">Turnstone</span><span class="sub-meta">Cozy tile puzzle</span></a></li><li><a href="../hot-crumb/"><span class="sub-name">Hot Crumb</span><span class="sub-meta">Bakery card game, in development</span></a></li><li class="sub-all"><a href="../games/">All games</a></li></ul></li>
+<li><a class="nav-link" href="../news/">News</a></li>
+<li><a class="nav-link" href="../support/" aria-current="page">Support</a></li>
+<li><a class="nav-link" href="../about/">About</a></li>
 </ul>
 </nav>
 </div>
@@ -82,15 +84,32 @@
 </div>
 </main>
 <footer class="site-footer">
-<div class="wrap">
-<ul>
+<div class="foot-cat" aria-hidden="true"><img class="cat-nap" src="../assets/img/studio/cat-nap.svg" width="48" height="44" alt="" loading="lazy" decoding="async"></div>
+<div class="wrap foot-grid">
+<div class="foot-brand">
+<a class="wordmark on-dark" href="../" aria-label="Jarvis Studios, home"><span class="wm-top" aria-hidden="true">JARVIS</span><span class="wm-bottom" aria-hidden="true">STUDIOS</span></a>
+<p>Cozy, hand-made games for one thumb.</p>
+<p class="foot-email">Support: <a data-support-email href="mailto:jarvisstudiohq@gmail.com">jarvisstudiohq@gmail.com</a></p>
+</div>
+<div class="foot-col foot-stores"><h2 class="foot-h">Get our games</h2><div class="foot-game"><a class="foot-game-name" href="../turnstone/">Turnstone</a><ul class="store-badges compact" aria-label="Turnstone in the app stores"><li class="store-soon"><img class="badge-img apple" src="../assets/img/store/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"><span class="soon-label">Coming soon</span></li><li class="store-soon"><img class="badge-img google" src="../assets/img/store/google-play-badge.png" alt="Get it on Google Play" width="646" height="250" loading="lazy" decoding="async"><span class="soon-label">Coming soon</span></li></ul></div><div class="foot-game"><a class="foot-game-name" href="../hot-crumb/">Hot Crumb</a><ul class="store-badges compact" aria-label="Hot Crumb in the app stores"><li class="store-soon"><img class="badge-img apple" src="../assets/img/store/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async"><span class="soon-label">In development</span></li><li class="store-soon"><img class="badge-img google" src="../assets/img/store/google-play-badge.png" alt="Get it on Google Play" width="646" height="250" loading="lazy" decoding="async"><span class="soon-label">In development</span></li></ul></div></div>
+<div class="foot-col"><h2 class="foot-h">Studio</h2><ul class="foot-links">
 <li><a href="../games/">Games</a></li>
+<li><a href="../news/">News</a></li>
+<li><a href="../about/">About</a></li>
+<li><a href="../press/">Press kit</a></li>
 <li><a href="../support/">Support</a></li>
-<li><a href="../legal/">Legal</a></li>
-<li><a href="../legal/#this-website">About this website</a></li>
-</ul>
-<p>Support: <a data-support-email href="mailto:jarvisstudiohq@gmail.com">jarvisstudiohq@gmail.com</a></p>
-<p>© 2026 Jarvis Studios. This website uses no cookies, no analytics and no trackers.</p>
+</ul></div>
+<div class="foot-col"><h2 class="foot-h">Legal</h2><ul class="foot-links">
+<li><a href="../turnstone/terms/">Terms of Use</a></li>
+<li><a href="../turnstone/privacy/">Privacy Policy</a></li>
+<li><a href="../turnstone/delete-data/">Data deletion</a></li>
+<li><a href="../accessibility/">Accessibility statement</a></li>
+<li><a href="../legal/">All legal documents</a></li>
+</ul></div>
+
+</div>
+<div class="wrap foot-base">
+<p>© 2026 Jarvis Studios. This website uses no cookies, no analytics and no trackers. <a href="../legal/#this-website">About this website</a></p>
 </div>
 </footer>
 <script src="../assets/js/config.js"></script>

@@ -16,6 +16,7 @@ What it verifies:
 6. Every page has lang, a <title>, a description and one <h1>. Document pages show a version (or "Not yet published") and a date.
 7. Every shown support email equals supportEmail in config.js (the pages were rebuilt after it changed).
 8. Every image in assets/img is at most 250 KB, and every <img> has an alt attribute.
+9. Press downloads (assets/press) are at most 1 MB each, and videos (assets/media) at most 3 MB each.
 """
 
 import argparse
@@ -396,6 +397,10 @@ def check_images():
     for f in sorted((ROOT / "assets/img").rglob("*")):
         if f.is_file() and f.stat().st_size > MAX_IMAGE:
             err(f"{f.relative_to(ROOT)} is {f.stat().st_size // 1024} KB (max 250 KB)")
+    for folder, cap, label in (("assets/press", 1024 * 1024, "1 MB"), ("assets/media", 3 * 1024 * 1024, "3 MB")):
+        for f in sorted((ROOT / folder).rglob("*")) if (ROOT / folder).is_dir() else []:
+            if f.is_file() and f.stat().st_size > cap:
+                err(f"{f.relative_to(ROOT)} is {f.stat().st_size // 1024} KB (max {label})")
 
 
 def main():

@@ -1,7 +1,7 @@
 # Jarvis Studios website
 
-A small static site for the studio's games and the documents the app stores ask for: a Privacy Policy, Terms of Use, a
-support page and data deletion instructions for every game. Plain HTML and CSS with two tiny scripts. No framework, no
+A small static studio site: a home page with news and a page per game, plus the documents the app stores ask for: a
+Privacy Policy, Terms of Use, a support page and data deletion instructions for every game. Plain HTML and CSS with two tiny scripts. No framework, no
 build on the server, no cookies, no analytics, no trackers. The only outside request is Google Fonts.
 
 ## The support email
@@ -22,18 +22,31 @@ Every page shows the address from that one value. Nothing else in the site holds
 
 | Path | What it is |
 |---|---|
-| `index.html`, `games/`, `support/`, `legal/` | The four tabs: Home, Games, Support, Legal |
-| `turnstone/` | Turnstone's game page |
+| `index.html` | Home: the Otto and Mabel hero, the News grid, the Turnstone and Hot Crumb bands, the studio promise |
+| `games/`, `news/`, `support/`, `about/` | The header nav (Games is a dropdown of the game pages and this list) |
+| `news/<slug>/` | News posts. Edit them in `NEWS` in `tools/build.py` |
+| `turnstone/` | Turnstone's game page: hero, features, screenshots (with a lightbox), a short muted video, store badges, documents |
 | `turnstone/terms/`, `turnstone/privacy/` | Turnstone's Terms of Use and Privacy Policy, generated word for word from the game's text |
 | `turnstone/delete-data/` | How "Delete my data" works in the game |
 | `turnstone/support/` | Turnstone support and FAQ |
-| `hot-crumb/` and `hot-crumb/terms/`, `privacy/`, `support/` | Hot Crumb's game page, and placeholders marked "Not yet published" |
+| `hot-crumb/` and `hot-crumb/terms/`, `privacy/`, `support/` | Hot Crumb's "In development" page, and placeholders marked "Not yet published" |
+| `legal/`, `accessibility/`, `press/` | All legal documents; the accessibility statement; the press kit (fact sheet and downloads) |
 | `404.html` | The page-not-found page (works at any depth, see below) |
 | `content/turnstone/*.txt` | Exact copies of the game's `godot-production/legal/*.txt` |
-| `assets/` | CSS, the two scripts, images |
+| `assets/img/` | Web images: WebP at several widths plus a JPEG or PNG fallback, each at most 250 KB |
+| `assets/img/store/` | The official Apple and Google badges, unmodified |
+| `assets/press/` | Full-size press downloads (at most 1 MB each) |
+| `assets/media/` | The Turnstone gameplay video and its poster (at most 3 MB) |
+| `assets/css/`, `assets/js/` | The stylesheet, `config.js` (the email) and `site.js` (the email, the menus and the lightbox) |
 | `tools/build.py` | Writes every HTML page from one layout |
 | `tools/check.py` | Checks links, paths, the legal text, the email and image sizes |
 | `site-root.txt`, `.nojekyll` | Keep them. The 404 page uses `site-root.txt` to find the site root. `.nojekyll` tells GitHub Pages to serve the files as they are |
+
+### Store badges and social links
+
+`GAMES` in `tools/build.py` holds each game's App Store and Google Play URLs. While a URL is empty, its official badge
+shows with a "Coming soon" (or "In development") label and is not a link. Paste the store URL and rebuild when a game
+goes live. `SOCIAL` lists social profiles; it is empty, so the footer shows none until the studio has accounts.
 
 The HTML is committed, so GitHub Pages serves the folder as it is. Edit pages in `tools/build.py` (and the CSS in
 `assets/css/site.css`), then run `python3 tools/build.py` and `python3 tools/check.py`.
