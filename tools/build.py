@@ -11,7 +11,7 @@ Rules the output follows (tools/check.py verifies them):
   (https://jarvisstudiohq.github.io/) and under a subpath (https://cjarvis0.github.io/jarvis-studio/).
 - Turnstone's legal pages are generated from content/turnstone/*.txt, verbatim copies of the game's own legal files.
 - The support email has one source: supportEmail in assets/js/config.js.
-- Store badges show a "Coming soon" state (no link) until a game's store URL is set in GAMES below.
+- A store badge renders (linked) only once that store URL is set in GAMES below; until then a text label shows the status.
 - Social links show only once SOCIAL below lists one.
 """
 
@@ -35,7 +35,7 @@ GAME_LINKS = [("Turnstone", "turnstone/", "Cozy tile puzzle"), ("Hot Crumb", "ho
 
 # Store pages. Leave a URL empty while the game is not in that store: the badge then shows "Coming soon" and is not a link.
 GAMES = {
-    "turnstone": {"name": "Turnstone", "app_store": "", "google_play": "", "status": "Coming soon"},
+    "turnstone": {"name": "Turnstone", "app_store": "", "google_play": "", "status": "Coming soon to iOS and Android"},
     "hot-crumb": {"name": "Hot Crumb", "app_store": "", "google_play": "", "status": "In development"},
 }
 
@@ -146,20 +146,22 @@ def cat(kind="look", cls="cat", alt=""):
 # ---------------------------------------------------------------- store badges
 
 def store_badges(key, compact=False):
-    """The official App Store and Google Play badges. While a game has no store URL, the badge is not a link and carries a
-    visible "Coming soon" label, so it never looks clickable and screen readers hear the same state."""
+    """Where to get a game. A store's official badge (assets/img/store/, unmodified) renders only once that store's URL is set
+    in GAMES, and then always as a link to the store page, as Apple's and Google's badge guidelines ask. Until a game has a
+    store URL, a plain text label shows its status instead ("Coming soon to iOS and Android", "In development")."""
     g = GAMES[key]
     items = []
     for store, alt, src, cls in (
             ("app_store", "Download on the App Store", "store/app-store-badge.svg", "apple"),
             ("google_play", "Get it on Google Play", "store/google-play-badge.png", "google")):
-        img = f'<img class="badge-img {cls}" src="{R}assets/img/{src}" alt="{alt}" width="{120 if cls == "apple" else 646}" height="{40 if cls == "apple" else 250}" loading="lazy" decoding="async">'
         if g[store]:
-            items.append(f'<li><a class="store-link" href="{esc(g[store])}">{img}<span class="sr-only"> (opens the store)</span></a></li>')
-        else:
-            items.append(f'<li class="store-soon">{img}<span class="soon-label">{esc(g["status"])}</span></li>')
+            img = (f'<img class="badge-img {cls}" src="{R}assets/img/{src}" alt="{alt}" width="{120 if cls == "apple" else 646}" '
+                   f'height="{40 if cls == "apple" else 250}" loading="lazy" decoding="async">')
+            items.append(f'<li><a class="store-link" href="{esc(g[store])}">{img}</a></li>')
     cls = "store-badges compact" if compact else "store-badges"
-    return f'<ul class="{cls}" aria-label="{esc(g["name"])} in the app stores">' + "".join(items) + "</ul>"
+    if not items:
+        return f'<p class="store-status{" compact" if compact else ""}">{esc(g["status"])}</p>'
+    return f'<ul class="{cls}" aria-label="Get {esc(g["name"])}">' + "".join(items) + "</ul>"
 
 
 # ---------------------------------------------------------------- layout
@@ -943,7 +945,7 @@ def build_accessibility():
 <p>Things we know are not right yet in Turnstone: there is no high-contrast option, and some screens still label only the selected tab of the main menu. We are working on both.</p>
 <h2 id="known">Known limits on this site</h2>
 <ul>
-<li>The store badges are images from Apple and Google. They show “Coming soon” in text beside them until our games are in the stores.</li>
+<li>Until our games are in the stores, the site says so in plain text instead of showing store badges.</li>
 <li>Our legal documents are shown word for word as the games show them, so we cannot shorten or reword them on this site.</li>
 </ul>
 <h2 id="contact">Tell us about a problem</h2>

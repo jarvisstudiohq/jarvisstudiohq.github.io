@@ -34,7 +34,7 @@ Every page shows the address from that one value. Nothing else in the site holds
 | `404.html` | The page-not-found page (works at any depth, see below) |
 | `content/turnstone/*.txt` | Exact copies of the game's `godot-production/legal/*.txt` |
 | `assets/img/` | Web images: WebP at several widths plus a JPEG or PNG fallback, each at most 250 KB |
-| `assets/img/store/` | The official Apple and Google badges, unmodified |
+| `assets/img/store/` | The official Apple and Google badges, unmodified, used only once a game has a store URL |
 | `assets/press/` | Full-size press downloads (at most 1 MB each) |
 | `assets/media/` | The Turnstone gameplay video and its poster (at most 3 MB) |
 | `assets/css/`, `assets/js/` | The stylesheet, `config.js` (the email) and `site.js` (the email, the menus and the lightbox) |
@@ -44,9 +44,10 @@ Every page shows the address from that one value. Nothing else in the site holds
 
 ### Store badges and social links
 
-`GAMES` in `tools/build.py` holds each game's App Store and Google Play URLs. While a URL is empty, its official badge
-shows with a "Coming soon" (or "In development") label and is not a link. Paste the store URL and rebuild when a game
-goes live. `SOCIAL` lists social profiles; it is empty, so the footer shows none until the studio has accounts.
+`GAMES` in `tools/build.py` holds each game's App Store and Google Play URLs. While a game has no store URL, no badge
+shows anywhere: a plain text label gives its status ("Coming soon to iOS and Android", "In development"). Paste a store
+URL and rebuild when a game goes live: that store's official badge (kept in `assets/img/store/`, unmodified) then shows
+in the footer and on the game page, linked to the store page, as Apple's and Google's badge guidelines ask. `SOCIAL` lists social profiles; it is empty, so the footer shows none until the studio has accounts.
 
 The HTML is committed, so GitHub Pages serves the folder as it is. Edit pages in `tools/build.py` (and the CSS in
 `assets/css/site.css`), then run `python3 tools/build.py` and `python3 tools/check.py`.
