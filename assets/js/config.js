@@ -6,7 +6,7 @@
  * then `python3 tools/check.py`.
  */
 window.SITE_CONFIG = {
-  supportEmail: "support@REPLACE-ME",
+  supportEmail: "jarvisstudiohq@gmail.com",
 
   /*
    * Optional. The published address of the site, ending in "/", for example
@@ -14,5 +14,5 @@ window.SITE_CONFIG = {
    * Leave it empty: every link on the site is relative, so the site works at any address.
    * Only the 404 page uses it, as a shortcut for finding the home page.
    */
-  siteUrl: ""
+  siteUrl: "https://jarvisstudiohq.github.io/"
 };

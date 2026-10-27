@@ -1,4 +1,4 @@
-@meta {"acceptance_version":3,"effective_date":"2026-10-27","version":3}
+@meta {"acceptance_version":4,"effective_date":"2026-10-27","version":4}
 
 # The short version
 
@@ -100,4 +100,4 @@ If you downloaded the game from Apple's App Store: these Terms are between you a
 
 # 15. Contact
 
-You can read these Terms and our Privacy Policy at any time in Settings, under About. This version of the game does not yet include a way to send us a message. When we add one, it will appear in Settings and in these Terms.
+You can read these Terms and our Privacy Policy at any time in Settings, under About. To ask a question, report a problem or send a request about the game or your information, write to us at jarvisstudiohq@gmail.com. In Settings, under About, "Contact us" shows this address and lets you copy it or open your email app. The game itself sends us nothing: writing to us is your own choice, from your own email account. We use what you send only to answer you.

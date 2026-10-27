@@ -256,6 +256,9 @@ def check_text_rules(pages):
     for path, parsed in pages.items():
         name = str(path.relative_to(ROOT))
         src = path.read_text(encoding="utf-8")
+        site_url = re.search(r'siteUrl\s*:\s*"([^"]*)"', (ROOT / "assets/js/config.js").read_text(encoding="utf-8"))
+        if site_url and site_url.group(1) and name == "404.html":
+            src = src.replace(json.dumps(site_url.group(1)), "")        # the one place siteUrl may appear (the 404 page's shortcut home)
         if "github.io" in src:
             err(f"{name}: contains an absolute site address (github.io); keep links relative")
         if not parsed.lang:

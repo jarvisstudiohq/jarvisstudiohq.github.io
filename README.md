@@ -4,20 +4,19 @@ A small static site for the studio's games and the documents the app stores ask 
 support page and data deletion instructions for every game. Plain HTML and CSS with two tiny scripts. No framework, no
 build on the server, no cookies, no analytics, no trackers. The only outside request is Google Fonts.
 
-## Before you publish: set the support email
+## The support email
 
-The support email is **one value**, in `assets/js/config.js`:
+The studio's support email is **one value**, in `assets/js/config.js` (`supportEmail`, currently `jarvisstudiohq@gmail.com`).
+To change it:
 
-```js
-supportEmail: "support@REPLACE-ME",
-```
+1. Edit `supportEmail` in `assets/js/config.js`.
+2. Run `python3 tools/build.py` (writes the address into every page too, for visitors without JavaScript).
+3. Run `python3 tools/check.py --release` (fails if the address is still a placeholder).
 
-1. Create the mailbox (for example a new Gmail account for the studio).
-2. Put its address in `assets/js/config.js`, replacing `support@REPLACE-ME`.
-3. Run `python3 tools/build.py` (writes the address into every page too, for visitors without JavaScript).
-4. Run `python3 tools/check.py --release` (fails while the placeholder is still there).
+The game's own documents name the same address (Terms section 15, Privacy Policy section 11, and Settings › About › Contact us), so a change
+also means a new version of those documents in the game, copied into `content/turnstone/`.
 
-Every page shows the address from that one value. Nothing else in the site holds an email address, and the check fails if one is hard-coded.
+Every page shows the address from that one value. Nothing else in the site holds an email address except the game's legal text, and the check fails if any other address is hard-coded.
 
 ## What is where
 
@@ -42,7 +41,7 @@ The HTML is committed, so GitHub Pages serves the folder as it is. Edit pages in
 ### Relative links only
 
 Every link and asset path is relative (`../legal/`, never `/legal/`), so the same files work at a domain root
-(`https://jarvisstudio.github.io/`) and under a subpath (`https://cjarvis0.github.io/jarvis-studio/`). The check fails on
+(`https://jarvisstudiohq.github.io/`) and under a subpath (`https://cjarvis0.github.io/jarvis-studio/`). The check fails on
 any root-absolute path or any `github.io` address in a page. The only place an absolute address may go is the optional
 `siteUrl` in `assets/js/config.js`, and you can leave it empty.
 
@@ -80,31 +79,31 @@ The owner's personal account already uses its one user site (`cjarvis0.github.io
 
 ### Option A (recommended): a free GitHub organization, site at the root
 
-1. On GitHub: your profile picture › **Your organizations** › **New organization** › choose the **Free** plan. Name it,
-   for example, `jarvisstudio`. The site address will be `https://jarvisstudio.github.io/`.
-2. In the organization, create a **public** repository named exactly `jarvisstudio.github.io` (the organization name
+1. On GitHub: your profile picture › **Your organizations** › **New organization** › choose the **Free** plan. Name it
+   `jarvisstudiohq` (already chosen). The site address will be `https://jarvisstudiohq.github.io/`.
+2. In the organization, create a **public** repository named exactly `jarvisstudiohq.github.io` (the organization name
    plus `.github.io`). Don't add a README, .gitignore or license, so the repository stays empty.
 3. Push this folder:
    ```sh
    cd jarvis-studio-site   # this folder
-   git remote add origin https://github.com/jarvisstudio/jarvisstudio.github.io.git
+   git remote add origin https://github.com/jarvisstudiohq/jarvisstudiohq.github.io.git
    git push -u origin main
    ```
 4. In the repository: **Settings** › **Pages** › **Build and deployment** › Source: **Deploy from a branch** ›
    Branch: `main`, folder `/ (root)` › **Save**. (User and organization sites usually turn this on by themselves. Check it anyway.)
-5. Wait a minute or two, then open `https://jarvisstudio.github.io/`. **Settings › Pages** shows the live address.
+5. Wait a minute or two, then open `https://jarvisstudiohq.github.io/`. **Settings › Pages** shows the live address.
 6. Leave **Enforce HTTPS** on.
 
 Store URLs for option A:
 
 | What | URL |
 |---|---|
-| Turnstone Privacy Policy | `https://jarvisstudio.github.io/turnstone/privacy/` |
-| Turnstone Terms of Use | `https://jarvisstudio.github.io/turnstone/terms/` |
-| Turnstone support | `https://jarvisstudio.github.io/turnstone/support/` |
-| Turnstone data deletion | `https://jarvisstudio.github.io/turnstone/delete-data/` |
-| Marketing / game page | `https://jarvisstudio.github.io/turnstone/` |
-| Hot Crumb privacy (placeholder) | `https://jarvisstudio.github.io/hot-crumb/privacy/` |
+| Turnstone Privacy Policy | `https://jarvisstudiohq.github.io/turnstone/privacy/` |
+| Turnstone Terms of Use | `https://jarvisstudiohq.github.io/turnstone/terms/` |
+| Turnstone support | `https://jarvisstudiohq.github.io/turnstone/support/` |
+| Turnstone data deletion | `https://jarvisstudiohq.github.io/turnstone/delete-data/` |
+| Marketing / game page | `https://jarvisstudiohq.github.io/turnstone/` |
+| Hot Crumb privacy (placeholder) | `https://jarvisstudiohq.github.io/hot-crumb/privacy/` |
 
 ### Option B: a project site under your personal account
 
@@ -160,7 +159,7 @@ You can move the site to your own domain (for example `jarvisstudios.com`) at an
    file to the repository. Run `git pull` so your local copy has it too.
 4. At your registrar, add the DNS records from GitHub's guide, "Managing a custom domain for your GitHub Pages site":
    for an apex domain (`jarvisstudios.com`), `A` records to GitHub's Pages IP addresses (and the `AAAA` records for IPv6);
-   for `www`, a `CNAME` to `jarvisstudio.github.io`. Use the addresses from the guide, not from memory.
+   for `www`, a `CNAME` to `jarvisstudiohq.github.io`. Use the addresses from the guide, not from memory.
 5. When the DNS check passes, turn on **Enforce HTTPS**.
 6. Optionally set `siteUrl` in `assets/js/config.js` to `https://jarvisstudios.com/` and rebuild.
 7. Update the URLs in App Store Connect and Play Console. GitHub redirects the old `github.io` addresses to the custom

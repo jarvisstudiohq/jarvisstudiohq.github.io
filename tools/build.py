@@ -8,7 +8,7 @@ Run this after changing a page below, the support email in assets/js/config.js, 
 
 Rules the output follows (tools/check.py verifies them):
 - Every link and asset path is relative (no leading "/"), so the site works both at a domain root
-  (https://jarvisstudio.github.io/) and under a subpath (https://cjarvis0.github.io/jarvis-studio/).
+  (https://jarvisstudiohq.github.io/) and under a subpath (https://cjarvis0.github.io/jarvis-studio/).
 - Turnstone's legal pages are generated from content/turnstone/*.txt, verbatim copies of the game's own legal files.
 - The support email has one source: supportEmail in assets/js/config.js.
 """
@@ -338,13 +338,6 @@ def build_turnstone():
          "games", body, crumbs=[("Home", ""), ("Games", "games/"), ("Turnstone", None)])
 
 
-def contact_note(doc_name):
-    return f"""<aside class="note" aria-labelledby="contact-note">
-<h2 id="contact-note">Contact by email</h2>
-<p>The {doc_name} above says that the game does not yet include a way to send us a message. You can also email us at {email_link("Turnstone " + doc_name)}. This note is part of this website, not of the {doc_name}.</p>
-</aside>"""
-
-
 def build_legal_doc(path, name, short, meta, blocks, other):
     v, d = meta["version"], meta["effective_date"]
     oth_path, oth_name = other
@@ -358,8 +351,7 @@ def build_legal_doc(path, name, short, meta, blocks, other):
 <div class="legal-doc" data-legal-source="content/turnstone/{short}.txt" data-version="{v}" data-effective-date="{d}">
 {legal_html(blocks)}
 </div>
-</article>
-{contact_note(name)}"""
+</article>"""
     page(path, f"{name} · Turnstone", f"Turnstone {name}, version {v}, effective {nice_date(d)}.", "legal", body,
          crumbs=[("Home", ""), ("Legal", "legal/"), ("Turnstone", "turnstone/"), (name, None)])
 
@@ -411,7 +403,7 @@ It also says: “This version of Turnstone has no online account. Everything it 
 <p>You can erase everything the game keeps by using “Delete my data” in Settings on your child’s device.</p>
 
 <h2 id="questions">Questions</h2>
-<p>Email {email_link("Turnstone data deletion")}. When a later version adds an online account, this page and the Privacy Policy will be updated to explain how deleting the account works.</p>
+<p>Email {email_link("Turnstone data deletion")}. If you have written to us and want that email erased, write to the same address. When a later version adds an online account, this page and the Privacy Policy will be updated to explain how deleting the account works.</p>
 </article>"""
     page("turnstone/delete-data/", "Delete your data · Turnstone",
          "How to delete everything Turnstone keeps about you, using Delete my data in the game's Settings.", "legal", body,
@@ -426,7 +418,7 @@ def turnstone_faq():
 </details>
 <details>
 <summary>How do I contact you?</summary>
-<div><p>Email {email_link("Turnstone support")}. This version of the game does not yet include a way to send us a message from inside the game.</p></div>
+<div><p>Email {email_link("Turnstone support")}. You can also find the address inside the game: <span class="ui-label">Settings</span> › <span class="ui-label">About</span> › <span class="ui-label">Contact us</span>.</p></div>
 </details>
 <details>
 <summary>Do I need an account or the internet?</summary>

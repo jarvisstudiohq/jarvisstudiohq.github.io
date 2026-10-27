@@ -1,4 +1,4 @@
-@meta {"acceptance_version":3,"effective_date":"2026-10-27","version":3}
+@meta {"acceptance_version":4,"effective_date":"2026-10-27","version":4}
 
 # The short version
 
@@ -34,7 +34,7 @@ We use this information only to run the game for you: to remember your progress,
 
 This version of Turnstone does not:
 
-• send your information to us or to anyone else (on Android it does not even ask for internet access);
+• send your information to us or to anyone else (apart from an email you choose to write to us, see section 11; on Android it does not even ask for internet access);
 
 • create an account, or ask for your email, phone number, contacts, photos, camera, microphone or location;
 
@@ -66,7 +66,7 @@ What each age group means in this version:
 
 • 18 and up: you can type your own name.
 
-In this version nothing is sent off the device for any age group, so we hold no information about any child. A parent or guardian can erase everything the game keeps by using "Delete my data" in Settings on the child's device.
+In this version nothing is sent off the device for any age group, so the game gives us no information about any child. A parent or guardian can erase everything the game keeps by using "Delete my data" in Settings on the child's device.
 
 # 6. Keeping and deleting your information
 
@@ -74,11 +74,11 @@ The game keeps your information on your device until you delete it. To erase all
 
 Uninstalling the game also removes its data from your device. Your device's own backups (for example, a phone backup you made) may keep a copy until they are replaced.
 
-Because this version has no account and stores nothing with us, there is nothing on our side to delete.
+Because this version has no account and the game stores nothing with us, there is nothing on our side to delete, other than any email you chose to send us (see section 11).
 
 # 7. Your rights
 
-Depending on where you live, you may have rights over your personal information, such as the right to see it, get a copy, correct it or delete it. In this version, all of it is on your device: you can see most of it in the game, change your name in Settings, and delete all of it with "Delete my data". We do not sell or share personal information, and we do not use it for advertising or profiling.
+Depending on where you live, you may have rights over your personal information, such as the right to see it, get a copy, correct it or delete it. In this version, all of it is on your device: you can see most of it in the game, change your name in Settings, and delete all of it with "Delete my data". For a question or request about your information, you can also write to us (section 11). We do not sell or share personal information, and we do not use it for advertising or profiling.
 
 # 8. Security
 
@@ -102,4 +102,4 @@ The version number and effective date are shown at the top. If we change this po
 
 # 11. Contact
 
-You can read this policy at any time in Settings, under About. This version of the game does not yet include a way to send us a message. When we add one, it will appear in Settings and in this policy.
+You can read this policy at any time in Settings, under About. For questions, problems, privacy requests and reports, write to us at jarvisstudiohq@gmail.com. In Settings, under About, "Contact us" shows this address and lets you copy it or open your email app. The game itself sends us nothing. If you write to us, that is your own choice: your email program sends the message from your own account, and we receive your email address and whatever you choose to put in it. We use that only to answer you and to deal with your request, and we do not sell it or share it for advertising. If you write to us and later want that email erased, ask us at the same address. If you are under 13, please ask a parent or guardian to write for you, and please do not send us personal details you do not need to.
