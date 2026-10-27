@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="280" viewBox="0 0 320 280"><defs>
+ <linearGradient id="otto-texture-body" x1=".13" y1="0" x2=".86" y2="1"><stop stop-color="#b3a1df"/><stop offset=".24" stop-color="#8069ba"/><stop offset=".56" stop-color="#594086"/><stop offset="1" stop-color="#29264d"/></linearGradient>
+ <linearGradient id="otto-texture-arm" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#9680c6"/><stop offset=".4" stop-color="#635091"/><stop offset="1" stop-color="#39315f"/></linearGradient>
+ <linearGradient id="otto-texture-front" x2=".6" y2="1"><stop stop-color="#8e77ba"/><stop offset=".5" stop-color="#5d498d"/><stop offset="1" stop-color="#342a58"/></linearGradient>
+ <linearGradient id="otto-texture-eye" x2=".7" y2="1"><stop stop-color="#fffdf0"/><stop offset=".7" stop-color="#fff8df"/><stop offset="1" stop-color="#c7bbd0"/></linearGradient>
+ <radialGradient id="otto-texture-cheek"><stop stop-color="#af87cc" stop-opacity=".6"/><stop offset="1" stop-color="#9274b5" stop-opacity="0"/></radialGradient>
+ <clipPath id="otto-texture-eyes"><ellipse cx="130" cy="132" rx="26" ry="33"/><ellipse cx="192" cy="126" rx="27" ry="35"/></clipPath>
+ </defs>
+ <ellipse cx="164" cy="259" rx="128" ry="17" fill="#244d65" opacity=".16"/>
+ <g class="otto-anatomy" transform="translate(160 230) rotate(-5) scale(1 1.03) translate(-160 -230)">
+ <g class="otto-rear-tentacles" fill="url(#otto-texture-arm)" stroke="#433260" stroke-width="2"><path d="M111 198C90 183 71 167 65 143C60 123 65 101 51 85C38 69 19 76 21 91C22 99 29 100 33 95C37 89 40 95 38 103C26 137 34 174 59 199C72 214 96 225 115 216Z"/><path d="M213 201C236 176 249 151 260 125C268 105 279 95 292 102C305 109 302 124 294 125C287 126 285 120 288 116C282 111 279 123 279 132C279 170 261 202 231 219Z"/><path d="M110 219C86 227 78 254 94 261C108 267 121 253 135 237ZM194 229C211 245 231 263 243 254C258 243 237 219 219 213Z"/></g>
+ <path d="M88 215C71 193 79 169 75 141C66 97 81 54 117 38C143 22 162 24 181 30C211 29 235 60 240 96C246 128 231 143 235 173C247 200 235 221 215 232C174 254 107 245 88 215Z" fill="url(#otto-texture-body)" stroke="#45365f" stroke-width="2"/>
+ <path d="M222 68C244 127 218 159 226 186C232 215 214 231 182 237C221 222 205 192 215 165C227 132 228 105 222 68Z" fill="#252345" opacity=".22"/>
+ <path d="M91 174C101 217 198 231 231 178C234 210 214 235 172 240C123 243 96 226 91 203Z" fill="#c29fd7" opacity=".16"/>
+ <path d="M92 91C100 52 135 37 161 41C126 54 108 81 104 113C95 129 87 112 92 91Z" fill="#e2d5f4" opacity=".4"/>
+ <path d="M169 38C195 34 214 57 215 78" fill="none" stroke="#c4b5e0" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+ <ellipse cx="101" cy="83" rx="8" ry="4" transform="rotate(-48 101 83)" fill="#f4e8ff" opacity=".45"/>
+ <ellipse cx="117" cy="168" rx="27" ry="21" fill="url(#otto-texture-cheek)"/><ellipse cx="207" cy="162" rx="25" ry="20" fill="url(#otto-texture-cheek)"/>
+ <g class="otto-eye-sockets"><ellipse cx="130" cy="134" rx="29" ry="35" fill="#392d60" opacity=".45"/><ellipse cx="192" cy="128" rx="30" ry="37" fill="#392d60" opacity=".45"/><ellipse cx="130" cy="132" rx="26" ry="33" fill="url(#otto-texture-eye)"/><ellipse cx="192" cy="126" rx="27" ry="35" fill="url(#otto-texture-eye)"/>
+ <g class="otto-pupils" clip-path="url(#otto-texture-eyes)"><ellipse cx="134" cy="130" rx="13" ry="18" fill="#20203a"/><ellipse cx="130" cy="124" rx="5" ry="7" fill="#fffdf4"/><circle cx="139" cy="138" r="2.2" fill="#a7ceda"/><ellipse cx="189" cy="124" rx="13" ry="18" fill="#20203a"/><ellipse cx="185" cy="118" rx="5" ry="7" fill="#fffdf4"/><circle cx="194" cy="132" r="2.2" fill="#a7ceda"/></g>
+ </g>
+ <path d="M109 94Q126 86 143 93M177 86Q195 79 211 86" fill="none" stroke="#463460" stroke-width="5" stroke-linecap="round"/>
+ <g class="otto-mouth"><path d="M137 181Q162 191 191 172C187 201 160 213 143 197Z" fill="#211c39"/><path d="M146 193Q163 185 178 194Q160 208 146 193" fill="#d385aa"/><path d="M141 183Q161 191 185 178" fill="none" stroke="#fff4dc" stroke-width="5" stroke-linecap="round"/></g>
+ <g class="otto-front-tentacles" fill="url(#otto-texture-front)" stroke="#45335f" stroke-width="2">
+ <path d="M130 209C131 225 126 247 102 252C77 258 52 255 48 241C45 231 54 225 62 230C67 235 62 238 63 241C78 249 96 231 102 215C108 201 122 198 130 209Z"/>
+ <path d="M184 214C187 235 207 251 228 243C235 240 237 231 231 228C225 226 224 232 220 231C215 228 220 216 231 217C251 220 253 244 236 255C211 273 177 255 164 239C156 252 134 266 117 259C109 255 112 245 120 245C135 246 144 228 145 216Z"/>
+ </g>
+ <path d="M115 215C110 238 85 252 62 242M178 221C189 248 216 259 234 248M146 234Q130 254 118 251" fill="none" stroke="#c29dd7" stroke-width="4" stroke-linecap="round" opacity=".62"/>
+ <g fill="#bd99cd" stroke="#745a9a" stroke-width="1" opacity=".7"><ellipse cx="107" cy="240" rx="4" ry="3" transform="rotate(-35 107 240)"/><ellipse cx="95" cy="247" rx="4" ry="3"/><ellipse cx="82" cy="249" rx="3" ry="2"/><ellipse cx="191" cy="246" rx="4" ry="3" transform="rotate(40 191 246)"/><ellipse cx="204" cy="251" rx="4" ry="3"/><ellipse cx="218" cy="252" rx="3" ry="2"/></g>
+ </g></svg>

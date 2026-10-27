@@ -1,0 +1,103 @@
+@meta {"acceptance_version":3,"effective_date":"2026-10-27","version":3}
+
+# The short version
+
+Turnstone is a puzzle game made by Jarvis Studios. Play fairly and do not try to break the game. Shells, stars, Tools, Tide Jars and cosmetics are part of the game: they have no cash value and cannot be sold or traded. This version works offline, keeps your progress on your device, sells nothing and shows no ads. You can delete your data at any time from Settings.
+
+# 1. Who we are and what this is
+
+Turnstone is made and published by Jarvis Studios ("we", "us"). These Terms of Use are the agreement between you and us about the Turnstone game and its updates (together, "the game").
+
+By tapping Accept, or by playing, you agree to these Terms. Our Privacy Policy explains what the game keeps and why; please read it too. If you do not agree, please do not play.
+
+# 2. Who can play
+
+Anyone can play Turnstone. The first time you open the game, it asks your age once and keeps only an age group. The game uses that group to set itself up for you. For example, players under 13 pick their name from a list instead of typing one.
+
+If you are under 18, please read these Terms with a parent or guardian and make sure they agree. Parents and guardians are responsible for how their children use the game.
+
+# 3. Your license to play
+
+We give you a personal, limited, non-exclusive, non-transferable and revocable license to download and play the game on devices you own or control, for your own non-commercial fun. The rules of the app store you downloaded it from (Apple's App Store or Google Play) also apply.
+
+You may not copy, sell, rent or redistribute the game. You may not reverse engineer, decompile or modify it, except where the law allows it. You may not use the game, its levels or its art to build or train another product without our written permission.
+
+# 4. Playing fairly
+
+Please do not:
+
+• cheat, or use bots, scripts, modified versions of the game or exploits;
+
+• interfere with the game or with other players' experience;
+
+• use the game for anything unlawful.
+
+If you find a bug that gives an unfair advantage, please do not use it. The Daily puzzle is the same for everyone and is played without Tools, and nothing you can buy will ever be usable in it.
+
+# 5. Things you make
+
+The game has a level maker. Anything you make in the game is "your content". You keep any rights you have in it.
+
+In this version, your content stays on your device, and you cannot share it with other players or talk with them. Sharing levels, clubs, friends and leaderboards are not open yet. If you are using a test copy of the game that shows them, the clubs, players, levels and records you see there are samples made up by the game. They are not real people.
+
+Before we let players share content or talk with each other, we will update these Terms to explain the rules for shared content and how to report it, and we will ask you to accept them again.
+
+# 6. Shells, stars, Tools, Tide Jars and cosmetics
+
+The game has virtual items: Shells (the game's currency), stars, Tools, Tide Jars and cosmetic items. In this version you earn all of them by playing.
+
+Virtual items are a limited license to use a feature of the game. They are not money or property. They have no cash value, cannot be exchanged for money or real goods, and cannot be sold, traded or moved outside the game, except where the law requires otherwise. Stars are earned by finishing levels and are never sold.
+
+We may change how virtual items work, for example their price in Shells or what they do, to keep the game balanced. We will not take away items you have earned without a fair reason, such as cheating or fixing an obvious error.
+
+# 7. Money and advertising
+
+This version of Turnstone does not sell anything for real money and does not show advertising. If you are using a test copy of the game, any prices or ads you see there are pretend: nothing is charged, and no advertising company is involved.
+
+These rules are part of how the game is built, and they will not change:
+
+• There are no lives and no energy. You never have to wait, or pay, to keep playing.
+
+• Money never buys a win and never buys stars.
+
+• Nothing paid can be used in the ranked Daily puzzle.
+
+If we add purchases or ads later, we will update these Terms and our Privacy Policy before they are turned on, and we will ask you to accept them again. Any purchase would be made through Apple or Google and would also be covered by their payment and refund terms.
+
+# 8. Our game and our rights
+
+The game, including its software, levels, characters (such as Otto), art, music, text and name, belongs to us or our licensors. Except for the license in section 3, these Terms do not give you any rights in it.
+
+# 9. Changes, updates and availability
+
+We update the game to fix problems, add or remove features, and keep it fair. Some updates may be needed to keep playing. We do not promise that the game will always be available, free of errors, or that every feature will last forever.
+
+We may change these Terms. The version number and date are at the top. If a change is important, the game will show you the new version and ask you to accept it before you continue. If you do not agree with a change, you can stop playing and delete your data.
+
+# 10. Ending this agreement
+
+You can stop playing at any time. You can delete your data in Settings, under Account and social, then "Delete my data". We may end your license if you seriously or repeatedly break these Terms, or if the law requires it. Sections 6, 8, 11, 12 and 13 continue after this agreement ends.
+
+# 11. No promises about the game
+
+We provide the game "as is" and "as available". To the extent the law allows, we make no promises about the game beyond what these Terms say. Nothing in these Terms takes away rights you have as a consumer that cannot be changed by an agreement.
+
+# 12. Limits on liability
+
+To the extent the law allows, we are not responsible for indirect or unexpected losses, or for lost progress or virtual items, that come from using the game. Our total responsibility to you for any claim about the game is limited to what you paid us for the game in the 12 months before the claim. In this version, the game is free and sells nothing.
+
+These limits do not apply to anything the law does not allow us to limit.
+
+# 13. Disputes and applicable law
+
+These Terms are governed by applicable law. If you have a problem with the game, we would like the chance to fix it: please see section 15. Nothing in these Terms takes away a right you have to bring a claim under the consumer laws where you live.
+
+# 14. General
+
+If part of these Terms cannot be enforced, the rest stays in force. If we do not enforce a term right away, we can still enforce it later. You may not transfer these Terms to someone else. We may transfer them to someone who takes over the game, and your rights under them will not be reduced as a result. These Terms and the Privacy Policy are the whole agreement between you and us about the game.
+
+If you downloaded the game from Apple's App Store: these Terms are between you and us, not Apple. Apple is not responsible for the game or its support. Apple and its subsidiaries may enforce these Terms against you as third-party beneficiaries.
+
+# 15. Contact
+
+You can read these Terms and our Privacy Policy at any time in Settings, under About. This version of the game does not yet include a way to send us a message. When we add one, it will appear in Settings and in these Terms.

@@ -1,0 +1,105 @@
+@meta {"acceptance_version":3,"effective_date":"2026-10-27","version":3}
+
+# The short version
+
+This version of Turnstone works offline. It keeps your game data on your device and does not send it to us or to anyone else. It has no account, no ads, no purchases and no analytics or crash reporting service. You can erase everything it keeps from Settings, under "Delete my data". Before we turn on any feature that sends information off your device, we will update this policy and ask you to accept it again.
+
+# 1. Who we are
+
+Turnstone is made by Jarvis Studios ("we", "us"). This policy explains what the game keeps, where it keeps it, and what you can do about it.
+
+# 2. What this version keeps, and where
+
+Everything below is stored only on your device, in the game's own storage. It is not sent to us, and we cannot see it.
+
+• Your age group (under 13, 13 to 17, or 18 and up), and the calendar year when it can next move up. The game turns the age you choose into a group and then forgets the number. It never stores your birthday or your exact age, and never shows your age group to anyone.
+
+• Which version of the Terms of Use and of this policy you accepted, and when.
+
+• The name you play under, and a random player number the game makes for itself. The number is not linked to your phone, your email or any store account.
+
+• Your game progress: levels, stars, scores, Daily and Tide results, Shells, Tools, Tide Jars, cosmetics, quests, achievements and statistics, such as how many days you have played.
+
+• Your settings, such as sound, haptics, reduced motion and preview.
+
+• Levels you make in the level maker.
+
+• Backup copies of these files, so a save is not lost if something goes wrong.
+
+While the game is running, it also keeps a short list of recent game events and errors in memory, to help it recover from problems. This list is never saved and never sent, and it is gone when you close the game.
+
+We use this information only to run the game for you: to remember your progress, to set up the game for your age group, and to keep your saves safe.
+
+# 3. What this version does not do
+
+This version of Turnstone does not:
+
+• send your information to us or to anyone else (on Android it does not even ask for internet access);
+
+• create an account, or ask for your email, phone number, contacts, photos, camera, microphone or location;
+
+• read your device's advertising ID or hardware IDs;
+
+• show ads, or track you across other apps or websites;
+
+• use an analytics, crash reporting, advertising or social service from another company;
+
+• sell or share your personal information;
+
+• let you talk with other players, or share what you make with them.
+
+The game only uses your device's clipboard when you tap a button to copy or paste a level code.
+
+# 4. Information Apple and Google may hold
+
+You download Turnstone from Apple's App Store or Google Play. They handle your download and your store account under their own privacy policies. If you have allowed your device to share diagnostics or usage data with app developers, Apple or Google may give us crash reports and statistics about the game. We use those only to find and fix problems.
+
+# 5. Children and teens
+
+People of all ages can play Turnstone. The first time you open the game, it asks your age on a slider. Nothing is picked for you, the question does not say what any answer unlocks, and it is asked only once. The game keeps only your age group, as described in section 2. Your group moves up by itself as the years pass. In Settings you can move to a younger group at any time, but you cannot move to an older one.
+
+What each age group means in this version:
+
+• Under 13: you pick your name from a list made by the game, and any text you could show to others comes from preset lists. No ads, ever.
+
+• 13 to 17: you can type your own name (the game checks it for rude words). Messages to other players, when that feature exists, are preset messages only. No personalized ads, ever.
+
+• 18 and up: you can type your own name.
+
+In this version nothing is sent off the device for any age group, so we hold no information about any child. A parent or guardian can erase everything the game keeps by using "Delete my data" in Settings on the child's device.
+
+# 6. Keeping and deleting your information
+
+The game keeps your information on your device until you delete it. To erase all of it: open Settings, go to Account and social, choose "Delete my data", and confirm. Turnstone then erases everything it keeps on the device. The next time you open it, it starts fresh, as if it were newly installed.
+
+Uninstalling the game also removes its data from your device. Your device's own backups (for example, a phone backup you made) may keep a copy until they are replaced.
+
+Because this version has no account and stores nothing with us, there is nothing on our side to delete.
+
+# 7. Your rights
+
+Depending on where you live, you may have rights over your personal information, such as the right to see it, get a copy, correct it or delete it. In this version, all of it is on your device: you can see most of it in the game, change your name in Settings, and delete all of it with "Delete my data". We do not sell or share personal information, and we do not use it for advertising or profiling.
+
+# 8. Security
+
+The game writes its saves carefully so they are not lost or damaged, and keeps them in app storage that other apps cannot normally read. Your device's own security, such as its screen lock, protects them too.
+
+# 9. When online features arrive
+
+Later versions may add features such as an online account and cloud save, clubs, leaderboards, sharing levels, purchases, optional ads, analytics or crash reports. Each of these would send some information off your device. Before any of them is turned on, we will:
+
+• update this policy to say exactly what is collected, why, who receives it and how long it is kept;
+
+• show you the new version in the game and ask you to accept it again;
+
+• ask for your consent, or a parent's consent, where the law requires it;
+
+• keep ads off for players under 13, and never show personalized ads to players under 18.
+
+# 10. Changes to this policy
+
+The version number and effective date are shown at the top. If we change this policy in an important way, the game will show you the new version and ask you to accept it before you continue.
+
+# 11. Contact
+
+You can read this policy at any time in Settings, under About. This version of the game does not yet include a way to send us a message. When we add one, it will appear in Settings and in this policy.

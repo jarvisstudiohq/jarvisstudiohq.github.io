@@ -1,0 +1,1 @@
+Jarvis Studios website root. tools/check.py and 404.html use this file to find the site root; keep it.
