@@ -313,8 +313,8 @@ TB_PITCH = ("Tumble is a drop-and-fuse block puzzle for one thumb, played in por
 
 # The studio's plain statement about ads and purchases (the games' own Terms and Privacy Policy are the full text).
 ADS_LINE = "Our games are free to play, supported by ads and optional in-app purchases."
-ADS_DETAIL = ("Ads and purchases are not switched on yet. When they are, ads are optional rewarded ads, plus an occasional ad "
-              "between runs in Tumble's Classic mode. They never appear in a ranked Daily, and a Remove ads purchase is available.")
+ADS_DETAIL = ("Ads and purchases are not switched on yet. When they are, ads are optional rewarded ads. We may later add an occasional ad "
+              "between runs in Tumble's Classic mode. Ads never appear in a ranked Daily, and Remove ads is available.")
 
 PAGE_DATE = "2026-10-27"    # the date the support, deletion and placeholder pages were written
 SUPPORT_VERSION = 1
@@ -362,7 +362,7 @@ NEWS = [
 <p>Tetris-shaped pieces drop into a well. When two pieces of the same size touch, they fuse into a bigger one, and fused pieces can chain. Full rows clear, and two of the biggest pieces make a Tumble.</p>
 <p>A rising floor slowly pushes the rows up, but a meter and a preview always show it coming, so it's never a surprise. Classic is endless. The Daily Drop is the same puzzle for everyone, each day. Drag to aim, let go to drop, and collect candy-bright looks for your blocks along the way.</p>
 <p>Tumble will be free to play, supported by ads and optional in-app purchases. They aren't switched on yet, and the Daily Drop will never have anything paid in it.</p>
-<p>Tumble isn't in the stores yet, and it has no release date. The screenshots on its page come from a test build.</p>
+<p>Tumble isn't in the stores yet, and it has no release date.</p>
 <p><a class="button" href="{R}tumble/">Visit the Tumble page</a></p>""",
     },
     {
@@ -438,8 +438,8 @@ def news_cards(items, heading_level=3):
 def build_home():
     body = f"""<section class="hero" aria-labelledby="studio-name">
 <picture class="hero-art">
-<source media="(max-width: 699px)" type="image/webp" srcset="{R}assets/img/home/hero-tall-450.webp 450w, {R}assets/img/home/hero-tall-900.webp 900w" sizes="100vw">
-<source media="(max-width: 699px)" srcset="{R}assets/img/home/hero-tall-900.jpg 900w" sizes="100vw">
+<source media="(max-width: 1099px)" type="image/webp" srcset="{R}assets/img/home/hero-tall-450.webp 450w, {R}assets/img/home/hero-tall-900.webp 900w" sizes="100vw">
+<source media="(max-width: 1099px)" srcset="{R}assets/img/home/hero-tall-900.jpg 900w" sizes="100vw">
 <source type="image/webp" srcset="{R}assets/img/home/hero-wide-1200.webp 1200w, {R}assets/img/home/hero-wide-1800.webp 1800w, {R}assets/img/home/hero-wide-2400.webp 2400w" sizes="100vw">
 <img src="{R}assets/img/home/hero-wide-1200.jpg" srcset="{R}assets/img/home/hero-wide-1200.jpg 1200w, {R}assets/img/home/hero-wide-1800.jpg 1800w" sizes="100vw" width="2400" height="1200" alt="Otto the octopus and a phone showing Tumble, side by side on a sunny stone quay at golden hour, with the studio cat sitting between them and a harbor town behind" fetchpriority="high" decoding="async">
 </picture>
@@ -797,7 +797,7 @@ TB_SHOTS = [
     ("run", "A run", "A run in progress: a green piece about to drop into the well, a pink row and a few blocks stacked at the bottom, with Hold and Next above and Rotate and Drop below."),
     ("tumble", "A Tumble", "Two giant yellow blocks fused into a Tumble, with a burst of light and +2,000 points."),
     ("meter", "The floor meter", "A row of dots under the well fills up to show when the rising floor will push the rows up."),
-    ("tall-stack", "A big chain", "A tall stack of glowing blue blocks, ready to clear, with a green piece waiting to drop."),
+    ("ready", "You’re ready", "The last card of the tutorial: three gold stars and “You’re ready”, with Play and Home buttons."),
     ("daily", "Daily Drop", "The Daily Drop card: today's pieces, a five-day streak, your attempt and a note that it's the same puzzle for everyone, with nothing paid."),
     ("looks", "Looks", "The Looks tab of the Shop: block styles called Jelly, Hard Candy, Glass, Gem, Pixel and Neon."),
     ("shop", "The Shop", "The Shop: a coin counter, the Neon block look in a golden frame, and tabs for Blocks, Boards, Homes, Effects and Sounds."),
@@ -853,7 +853,7 @@ def build_tumble():
 <ul class="shots shots-8">
 {shot_html}
 </ul>
-<p class="muted small">Screenshots from a test build, so the scores and coin counts are examples.</p>
+<p class="muted small">The scores and coin counts in these screenshots are examples.</p>
 </section>
 
 <section class="section" aria-labelledby="docs">
@@ -936,7 +936,7 @@ def tumble_faq():
 </details>
 <details>
 <summary>Are there ads? What do Remove ads and Restore purchases do?</summary>
-<div><p>Tumble will be free to play, supported by ads and optional in-app purchases. Ads, coin packs and Remove ads aren’t switched on yet. When they are, ads are optional rewarded ads (such as “Keep going” or free coins), plus an occasional ad between runs in Classic. They never appear in the Daily Drop. Players under 13, and anyone whose age group isn’t known, never see ads.</p>
+<div><p>Tumble will be free to play, supported by ads and optional in-app purchases. Ads, coin packs and Remove ads aren’t switched on yet. When they are, ads are optional rewarded ads (such as “Keep going” or free coins). We may later add an occasional ad between runs in Classic, which Remove ads would remove. They never appear in the Daily Drop. Players under 13, and anyone whose age group isn’t known, aren’t offered rewarded ads and never see personalized ads.</p>
 <p><span class="ui-label">Remove ads</span> takes away the ads you didn’t choose, and the optional ones stay yours to pick. If you bought it before, <span class="ui-label">Restore purchases</span> in Settings gets it back on this device. It can’t bring back coins you’ve already spent or lost.</p></div>
 </details>
 <details>
@@ -1022,7 +1022,7 @@ def build_about():
 <ul>
 <li><strong>Kind to your time.</strong> No lives, no energy, and no timers that make you wait or hurry.</li>
 <li><strong>Fair.</strong> Nothing you can buy wins for you, and every ranked Daily is the same for everyone.</li>
-<li><strong>Honest about money.</strong> Our games are free to play, supported by ads and optional in-app purchases. They aren’t switched on yet. When they are, ads are optional or limited to a few moments between runs, and never in a ranked Daily.</li>
+<li><strong>Honest about money.</strong> Our games are free to play, supported by ads and optional in-app purchases. They aren’t switched on yet. When they are, ads are mostly optional ones you choose to watch, and they never appear in a ranked Daily.</li>
 <li><strong>Readable.</strong> Color is never the only clue, and text sizes can grow.</li>
 <li><strong>Private.</strong> We collect as little as we can, and we say exactly what, in plain words.</li>
 </ul>
@@ -1108,7 +1108,7 @@ def build_press():
 <div><dt>Modes</dt><dd>Classic, which is endless, and the Daily Drop, the same puzzle for everyone each day</dd></div>
 <div><dt>Controls</dt><dd>One thumb: drag to aim, let go to drop</dd></div>
 <div><dt>Look</dt><dd>Bright candy blocks, with looks to collect</dd></div>
-<div><dt>Price</dt><dd>Free to play, supported by ads and optional in-app purchases (optional rewarded ads, an occasional ad between runs in Classic, never in the ranked Daily, and Remove ads)</dd></div>
+<div><dt>Price</dt><dd>Free to play, supported by ads and optional in-app purchases (optional rewarded ads, possibly an occasional ad between runs in Classic later, never in the ranked Daily, and Remove ads)</dd></div>
 <div><dt>Details</dt><dd><a href="{R}tumble/">Game page</a> · <a href="{R}tumble/privacy/">Privacy Policy</a> · <a href="{R}tumble/terms/">Terms of Use</a></dd></div>
 </dl>
 </section>
@@ -1117,7 +1117,7 @@ def build_press():
 <ul class="doc-list">
 {dl}
 </ul>
-<p class="muted small">You may use these images to write about our games. Please don’t change the characters or the wordmark. Screenshots are from test builds.</p>
+<p class="muted small">You may use these images to write about our games. Please don’t change the characters or the wordmark. Turnstone screenshots are from a test build.</p>
 </section>"""
     page("press/", "Press kit", f"The {STUDIO} press kit: fact sheets, wordmark, key art and screenshots.", "about", body,
          crumbs=[("Home", ""), ("About", "about/"), ("Press kit", None)])
