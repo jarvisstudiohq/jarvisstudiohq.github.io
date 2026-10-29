@@ -1,0 +1,115 @@
+@meta {"acceptance_version":4,"effective_date":"2026-10-29","version":4}
+
+# The short version
+
+Tumble is a puzzle game made by Jarvis Studios. Play fairly and do not try to break the game. Coins and cosmetic looks are part of the game: they have no cash value and cannot be sold or traded. Coins buy looks only, never a win, and nothing you can buy is usable in the ranked Daily Drop. Optional ads, coin packs and Remove ads are planned; they are not on yet, and you never have to watch an ad or pay to keep playing. The game keeps your progress on your device. You can delete your data at any time from Settings.
+
+# 1. Who we are and what this is
+
+Tumble is made and published by Jarvis Studios ("we", "us"). These Terms of Use are the agreement between you and us about the Tumble game and its updates (together, "the game").
+
+By tapping Accept, or by playing, you agree to these Terms. Our Privacy Policy explains what the game keeps and why; please read it too. If you do not agree, please do not play.
+
+# 2. Who can play
+
+Anyone can play Tumble. The first time you open the game, it asks your age once and keeps only an age group. The game uses that group to set itself up for you. For example, it decides whether an optional ad can be offered to you at all: players under 13, and anyone whose age group is not known, are never offered one.
+
+If you are under 18, please read these Terms with a parent or guardian and make sure they agree. Parents and guardians are responsible for how their children use the game, including anything bought with the family's store account.
+
+# 3. Your license to play
+
+We give you a personal, limited, non-exclusive, non-transferable and revocable license to download and play the game on devices you own or control, for your own non-commercial fun. The rules of the app store you downloaded it from (Apple's App Store or Google Play) also apply.
+
+You may not copy, sell, rent or redistribute the game. You may not reverse engineer, decompile or modify it, except where the law allows it. You may not use the game, its art, sounds or levels to build or train another product without our written permission.
+
+# 4. Playing fairly
+
+Please do not:
+
+• cheat, or use bots, scripts, modified versions of the game or exploits;
+
+• interfere with the game or with other players' experience;
+
+• use the game for anything unlawful.
+
+If you find a bug that gives an unfair advantage, please do not use it. The Daily Drop is the same puzzle for everyone on a given day and has one ranked attempt a day. It has no ads, and nothing you can buy or earn from coins can be used in it.
+
+# 5. Scores and the Daily Drop
+
+The game keeps your best scores and your Daily Drop results. In this version, they stay on your device. The Daily Drop leaderboard is not open yet: the game shows only your own score, and says so. Your scores are not shared with other players, and you cannot talk with other players in this version.
+
+Before we let players see each other's scores or names, we will update these Terms and our Privacy Policy to explain what is shared and how to report a problem, and we will ask you to accept them again.
+
+# 6. Coins and cosmetic looks
+
+The game has virtual items: coins (the game's currency) and cosmetic looks, such as block styles and board themes. You earn coins by playing, you can get a few more by choosing to watch an optional ad when ads are on, and you will be able to buy coin packs when purchases are on. You spend coins only on cosmetic looks. Looks change how the game looks; they never change how it plays, what you score or how you rank.
+
+Virtual items are a limited license to use a feature of the game. They are not money or property. They have no cash value, cannot be exchanged for money or real goods, and cannot be sold, traded or moved outside the game, except where the law requires otherwise. Coins that you buy are not refundable by us, except as the store's refund policy or the law allows (see section 7).
+
+We may change how virtual items work, for example the price of a look or how many coins a game pays, to keep the game balanced. We will not take away items you have earned without a fair reason, such as cheating or fixing an obvious error.
+
+# 7. Money and advertising
+
+Ads, coin packs and Remove ads are not on yet. This version of Tumble does not show ads and does not sell anything. We will turn them on only in a later release, after we update these Terms and the Privacy Policy and ask you to accept them again. If you are using a test copy of the game, any prices or ads you see there are pretend: nothing is charged, and no advertising company is involved.
+
+When they are on, this is how they work.
+
+Optional ads. Tumble has only ads you choose to watch (rewarded ads):
+
+• "Keep going" in a Classic run: after a run ends, you may watch a short ad to take back your last drop and carry on, once per run.
+
+• Free coins on Home: you may watch a short ad for a small number of coins, with a limit each day and a short wait between ads.
+
+Saying no costs you nothing. The Daily Drop, onboarding and the middle of a run never show an ad. Ads that appear without your choosing them (such as one between runs) are switched off. If we ever turn them on, they will be limited, never shown in the Daily Drop, and Remove ads will remove them. When ads are on, an advertising company will provide them. It follows the age rules in section 2 and our Privacy Policy, and where the law requires it, asks for your consent first. If an ad cannot play, nothing is lost and nothing is granted.
+
+Coin packs. Coin packs are virtual currency, bought with real money through Apple or Google at the price they show you. The price in your own currency and the payment are handled by the store, under the store's terms. Your first coin pack also gives a one-time bonus of extra coins. In some places, such as the European Union and the European Economic Area, the game also shows an approximate money amount next to a coin price. Coins have no cash value (section 6). Purchases are made through the store, so refunds, cancelations and complaints go to the store under its policy; where the law gives you a right to a refund or to cancel, you keep it.
+
+Remove ads. Remove ads is a one-time purchase that removes ads you did not choose. It does not remove optional ads such as Keep going and free coins: those stay yours to pick. "Restore purchases" in Settings asks the store what your store account owns and gives you Remove ads again, for example on a new phone. If the store tells us a purchase was refunded, Remove ads may stop.
+
+If you are under 18, please ask a parent or guardian before buying anything. The game does not check who is paying: the store's own controls do.
+
+These rules are part of how the game is built, and they will not change:
+
+• There are no lives and no energy. You never have to wait, or pay, to keep playing.
+
+• Money never buys a win, a score or a rank.
+
+• Nothing paid can be used in the ranked Daily Drop, and the Daily Drop has no ads.
+
+# 8. Our game and our rights
+
+The game, including its software, art, music, sounds, text and name, belongs to us or our licensors. Except for the license in section 3, these Terms do not give you any rights in it.
+
+# 9. Changes, updates and availability
+
+We update the game to fix problems, add or remove features, and keep it fair. Some updates may be needed to keep playing. We do not promise that the game will always be available, free of errors, or that every feature will last forever.
+
+We may change these Terms. The version number and date are at the top. If a change is important, the game will show you the new version and ask you to accept it before you continue. When ads, purchases or online features are turned on, we will update these Terms and the Privacy Policy first. If you do not agree with a change, you can stop playing and delete your data.
+
+# 10. Ending this agreement
+
+You can stop playing at any time. You can delete your data in Settings, under Account, then "Delete my data". Deleting your data erases coins and looks that are kept on your device, and we cannot put them back. We may end your license if you seriously or repeatedly break these Terms, or if the law requires it. Sections 6, 8, 11, 12 and 13 continue after this agreement ends.
+
+# 11. No promises about the game
+
+We provide the game "as is" and "as available". To the extent the law allows, we make no promises about the game beyond what these Terms say. Nothing in these Terms takes away rights you have as a consumer that cannot be changed by an agreement.
+
+# 12. Limits on liability
+
+To the extent the law allows, we are not responsible for indirect or unexpected losses, or for lost progress, coins or looks, that come from using the game. Our total responsibility to you for any claim about the game is limited to what you paid us for the game in the 12 months before the claim. In this version, the game is free and sells nothing.
+
+These limits do not apply to anything the law does not allow us to limit.
+
+# 13. Disputes and applicable law
+
+These Terms are governed by applicable law. If you have a problem with the game, we would like the chance to fix it: please see section 15. Nothing in these Terms takes away a right you have to bring a claim under the consumer laws where you live.
+
+# 14. General
+
+If part of these Terms cannot be enforced, the rest stays in force. If we do not enforce a term right away, we can still enforce it later. You may not transfer these Terms to someone else. We may transfer them to someone who takes over the game, and your rights under them will not be reduced as a result. These Terms and the Privacy Policy are the whole agreement between you and us about the game.
+
+If you downloaded the game from Apple's App Store: these Terms are between you and us, not Apple. Apple is not responsible for the game or its support. Apple and its subsidiaries may enforce these Terms against you as third-party beneficiaries.
+
+# 15. Contact
+
+You can read these Terms and our Privacy Policy at any time in Settings, under About. To ask a question, report a problem or send a request about the game or your information, write to us at jarvisstudiohq@gmail.com. In Settings, under About, "Contact us" shows this address and lets you copy it or open your email app. The game itself sends us nothing: writing to us is your own choice, from your own email account. We use what you send only to answer you.

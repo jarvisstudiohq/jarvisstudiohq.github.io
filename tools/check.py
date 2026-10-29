@@ -34,7 +34,7 @@ ALLOWED_CSS_HOSTS = {"fonts.googleapis.com"}
 ALLOWED_PRECONNECT = {"fonts.googleapis.com", "fonts.gstatic.com"}
 PLACEHOLDER = "REPLACE-ME"
 DOC_PAGES = ["turnstone/terms/", "turnstone/privacy/", "turnstone/delete-data/", "turnstone/support/",
-             "hot-crumb/terms/", "hot-crumb/privacy/", "hot-crumb/support/"]
+             "tumble/terms/", "tumble/privacy/", "tumble/delete-data/", "tumble/support/"]
 
 errors = []
 warnings = []

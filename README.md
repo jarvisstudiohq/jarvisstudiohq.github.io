@@ -22,17 +22,19 @@ Every page shows the address from that one value. Nothing else in the site holds
 
 | Path | What it is |
 |---|---|
-| `index.html` | Home: the Otto and Mabel hero, the News grid, the Turnstone and Hot Crumb bands, the studio promise |
+| `index.html` | Home: the Otto and Tumble hero, the News grid, the Turnstone and Tumble bands, the studio promise |
 | `games/`, `news/`, `support/`, `about/` | The header nav (Games is a dropdown of the game pages and this list) |
 | `news/<slug>/` | News posts. Edit them in `NEWS` in `tools/build.py` |
 | `turnstone/` | Turnstone's game page: hero, features, screenshots (with a lightbox), a short muted video, store badges, documents |
 | `turnstone/terms/`, `turnstone/privacy/` | Turnstone's Terms of Use and Privacy Policy, generated word for word from the game's text |
 | `turnstone/delete-data/` | How "Delete my data" works in the game |
 | `turnstone/support/` | Turnstone support and FAQ |
-| `hot-crumb/` and `hot-crumb/terms/`, `privacy/`, `support/` | Hot Crumb's "In development" page, and placeholders marked "Not yet published" |
+| `tumble/` | Tumble's game page: hero, features, screenshots (with a lightbox), store status, documents |
+| `tumble/terms/`, `tumble/privacy/` | Tumble's Terms of Use and Privacy Policy, generated word for word from the game's text |
+| `tumble/delete-data/`, `tumble/support/` | How "Delete my data" works in Tumble; Tumble support and FAQ |
 | `legal/`, `accessibility/`, `press/` | All legal documents; the accessibility statement; the press kit (fact sheet and downloads) |
 | `404.html` | The page-not-found page (works at any depth, see below) |
-| `content/turnstone/*.txt` | Exact copies of the game's `godot-production/legal/*.txt` |
+| `content/turnstone/*.txt`, `content/tumble/*.txt` | Exact copies of each game's legal `.txt` files (Turnstone: `godot-production/legal/`; Tumble: `tumble/godot/legal/`) |
 | `assets/img/` | Web images: WebP at several widths plus a JPEG or PNG fallback, each at most 250 KB |
 | `assets/img/store/` | The official Apple and Google badges, unmodified, used only once a game has a store URL |
 | `assets/press/` | Full-size press downloads (at most 1 MB each) |
@@ -73,8 +75,15 @@ The site must match the game word for word.
    are identical to the game's files, and that the game has no legal document the site is missing.
 4. If the game's "Delete my data" flow changed, update `turnstone/delete-data/` in `tools/build.py` so it describes the flow exactly.
 
-Hot Crumb has no legal text yet. When it does, add its `.txt` files under `content/hot-crumb/` and build its pages the
-same way Turnstone's are built (`build_legal_doc` in `tools/build.py`).
+Tumble works the same way: copy `terms_of_use.txt` and `privacy_policy.txt` from `tumble/godot/legal/` into `content/tumble/`,
+rebuild, and update `tumble/delete-data/` if its Delete my data flow changed.
+
+## Ads and purchases wording
+
+Our games are free to play, supported by ads and optional in-app purchases (the footer says so on every page). They aren't switched
+on yet. When they are: optional rewarded ads, an occasional ad between runs in Tumble's Classic mode, never in a ranked Daily, and
+Remove ads. Don't write "no ads" about a game; say "not switched on yet" instead. The statement about the website itself (no cookies,
+analytics or trackers) is separate and stays.
 
 ## Check locally
 
@@ -117,7 +126,10 @@ Store URLs for option A:
 | Turnstone support | `https://jarvisstudiohq.github.io/turnstone/support/` |
 | Turnstone data deletion | `https://jarvisstudiohq.github.io/turnstone/delete-data/` |
 | Marketing / game page | `https://jarvisstudiohq.github.io/turnstone/` |
-| Hot Crumb privacy (placeholder) | `https://jarvisstudiohq.github.io/hot-crumb/privacy/` |
+| Tumble Privacy Policy | `https://jarvisstudiohq.github.io/tumble/privacy/` |
+| Tumble Terms of Use | `https://jarvisstudiohq.github.io/tumble/terms/` |
+| Tumble support | `https://jarvisstudiohq.github.io/tumble/support/` |
+| Tumble data deletion | `https://jarvisstudiohq.github.io/tumble/delete-data/` |
 
 ### Option B: a project site under your personal account
 
@@ -140,7 +152,8 @@ Store URLs for option B:
 | Turnstone support | `https://cjarvis0.github.io/jarvis-studio/turnstone/support/` |
 | Turnstone data deletion | `https://cjarvis0.github.io/jarvis-studio/turnstone/delete-data/` |
 | Marketing / game page | `https://cjarvis0.github.io/jarvis-studio/turnstone/` |
-| Hot Crumb privacy (placeholder) | `https://cjarvis0.github.io/jarvis-studio/hot-crumb/privacy/` |
+| Tumble Privacy Policy | `https://cjarvis0.github.io/jarvis-studio/tumble/privacy/` |
+| Tumble Terms of Use | `https://cjarvis0.github.io/jarvis-studio/tumble/terms/` |
 
 If you later set a custom domain on your personal site, project sites move under it too (for example
 `https://yourname.com/jarvis-studio/`). That is another reason to prefer option A.

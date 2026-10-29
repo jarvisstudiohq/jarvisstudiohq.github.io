@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Grandstander:wght@700;800;900&family=Ultra&display=swap">
 <style>
 /* Jarvis Studios website. Plain CSS, no framework.
-   Look: warm "toy ceramic" — cream glaze, Turnstone's deep teal and coral, bakery crust and butter tones, soft shadows,
+   Look: warm "toy ceramic" — cream glaze, Turnstone's deep teal and coral, candy grape and butter tones, soft shadows,
    rounded tiles with a glazed lip. Phone first; light and dark follow the device. */
 
 :root {
@@ -29,8 +29,8 @@
   --coral: #b84a33;        /* primary button (white text passes AA) */
   --coral-text: #a8402b;
   --coral-soft: #fbe1d6;
-  --crust: #8a4a1c;        /* bakery brown text */
-  --crust-soft: #f8e0c2;
+  --grape: #4a35a8;        /* Tumble purple text */
+  --grape-soft: #e6e0fb;
   --butter: #f6c25b;
   --on-ink: #fffaf0;
   --on-coral: #fffaf0;
@@ -65,8 +65,8 @@
     --coral: #f28b6f;
     --coral-text: #f59a80;
     --coral-soft: #4a2b25;
-    --crust: #f3c08e;
-    --crust-soft: #4a3020;
+    --grape: #cfc4ff;
+    --grape-soft: #35296b;
     --on-ink: #10262c;
     --on-coral: #2a1208;
     --glaze: inset 0 -5px 0 rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
@@ -159,8 +159,7 @@ p { margin: 0 0 1em; }
   margin: 0 0 14px;
 }
 .toy-title.small { font-size: clamp(2.3rem, 6vw, 3.6rem); }
-.toy-title.crust { --o: #6e3416; --drop: #4d220c; }
-.band-hotcrumb .toy-title { --o: #6e3416; --drop: #4d220c; }
+.band-tumble .toy-title { --o: #2b1b66; --drop: #170e3d; }
 
 /* ---------- header and nav ---------- */
 
@@ -442,7 +441,7 @@ main.main-wide { padding: 0 0 72px; }
   background: var(--teal-soft);
   color: var(--ink);
 }
-.tag.crust { background: var(--crust-soft); color: var(--crust); }
+.tag.grape { background: var(--grape-soft); color: var(--grape); }
 .tag.ink { background: var(--ink); color: var(--on-ink); }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -464,16 +463,16 @@ main.main-wide { padding: 0 0 72px; }
     radial-gradient(circle at 92% 80%, rgba(255, 255, 255, 0.35) 0 90px, transparent 91px),
     linear-gradient(180deg, #dff3ef 0%, #c4e7e2 100%);
 }
-.band-hotcrumb {
-  --band-ink: #5e2c10;
-  --band-text: #4a3020;
+.band-tumble {
+  --band-ink: #2b1b66;
+  --band-text: #3a2e66;
   background:
-    radial-gradient(circle, rgba(255, 255, 255, 0.55) 1.6px, transparent 2.2px) 0 0 / 26px 26px,
-    linear-gradient(180deg, #fde9cc 0%, #f7d6a8 100%);
+    radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.5) 0 70px, transparent 71px),
+    linear-gradient(180deg, #e7e0ff 0%, #d1c6fa 100%);
 }
 @media (prefers-color-scheme: dark) {
   .band-turnstone { --band-ink: #f6e7c8; --band-text: #dce9e4; background: radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.05) 0 60px, transparent 61px), linear-gradient(180deg, #153e45 0%, #0f3138 100%); }
-  .band-hotcrumb { --band-ink: #f6e7c8; --band-text: #f0dcc4; background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1.6px, transparent 2.2px) 0 0 / 26px 26px, linear-gradient(180deg, #3d2718 0%, #2d1c11 100%); }
+  .band-tumble { --band-ink: #f1ecff; --band-text: #dcd5f5; background: linear-gradient(180deg, #2f2268 0%, #211750 100%); }
 }
 .band .eyebrow { color: var(--band-ink); }
 .band-line { font-size: 1.18rem; color: var(--band-text); max-width: 40ch; }
@@ -495,11 +494,8 @@ main.main-wide { padding: 0 0 72px; }
 .panel-img { width: 100%; height: auto; }
 .band-art .cutout { position: absolute; filter: drop-shadow(0 14px 14px rgba(40, 20, 10, 0.3)); }
 .band-turnstone .cutout { width: 54%; right: -3%; bottom: -16%; }
-.band-hotcrumb .art-panel { width: 82%; margin-left: auto; }
-.band-hotcrumb .cutout { width: 36%; left: 0; bottom: -10%; }
 @media (min-width: 900px) {
   .band-turnstone .cutout { right: -8%; }
-  .band-hotcrumb .cutout { left: -6%; width: 38%; }
 }
 .band-copy .button { margin-top: 6px; }
 
@@ -567,7 +563,7 @@ main.main-wide { padding: 0 0 72px; }
   .game-hero-copy .store-badges { justify-content: flex-start; }
   .game-hero-char { width: min(100%, 400px); align-self: end; margin-bottom: 2%; }
 }
-.ts-hero::after, .hc-hero::after {
+.ts-hero::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -1px; height: 14px;
@@ -641,47 +637,34 @@ main.main-wide { padding: 0 0 72px; }
 
 .intro-split .lead { max-width: 70ch; }
 
-/* Hot Crumb */
-.hc-hero {
+/* Tumble */
+.tb-hero {
   position: relative;
   overflow: clip;
   padding: 40px 0 70px;
   background:
-    radial-gradient(circle, rgba(255, 255, 255, 0.6) 1.6px, transparent 2.2px) 0 0 / 26px 26px,
-    linear-gradient(180deg, #fde9cc 0%, #f5cf9b 100%);
+    radial-gradient(circle at 80% 20%, rgba(120, 90, 230, 0.45) 0, transparent 55%),
+    linear-gradient(180deg, #3b2a85 0%, #261a5a 100%);
 }
-@media (prefers-color-scheme: dark) {
-  .hc-hero { background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1.6px, transparent 2.2px) 0 0 / 26px 26px, linear-gradient(180deg, #3d2718 0%, #2d1c11 100%); }
+.tb-hero-grid { display: grid; gap: 34px; align-items: center; }
+.tb-hero-copy { text-align: center; }
+.tb-hero-copy .toy-title { --o: #2b1b66; --drop: #170e3d; }
+.tb-hero-copy .hero-line { background: none; box-shadow: none; padding: 0; color: #f1ecff; border-radius: 0; display: block; max-width: 30ch; margin: 0 auto 14px; }
+.tb-hero .store-status { background: #fffaf0; color: #3b2a85; }
+.tb-hero-art { display: grid; place-items: center; }
+.tb-icon { width: min(60%, 300px); height: auto; border-radius: 22%; box-shadow: 0 18px 36px rgba(10, 5, 40, 0.5), 0 0 0 5px #fffaf0; transform: rotate(-4deg); }
+@media (min-width: 900px) {
+  .tb-hero-grid { grid-template-columns: 1.1fr 1fr; gap: 64px; }
+  .tb-hero { padding: 64px 0 96px; }
+  .tb-hero-copy { text-align: left; }
+  .tb-hero-copy .hero-line { margin-left: 0; }
 }
-.hc-hero-grid { display: grid; gap: 34px; align-items: center; }
-.hc-hero-copy .hero-line { background: none; box-shadow: none; padding: 0; color: #5a2d14; border-radius: 0; display: block; max-width: 30ch; margin: 0 0 14px; }
-.hc-hero .tag { background: #fffaf0; color: #8a4a1c; box-shadow: 0 2px 0 rgba(110, 52, 22, 0.15); }
-.hc-hero-copy .muted { color: #6b4a2e; }
-@media (prefers-color-scheme: dark) {
-  .hc-hero-copy .hero-line { color: #f6e7c8; }
-  .hc-hero-copy .muted { color: #e0c8a8; }
+.tb-hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 14px;
+  background: radial-gradient(circle at 14px 0, transparent 13px, var(--bg) 13.5px) repeat-x;
+  background-size: 28px 14px;
 }
-.hc-hero-copy .tag { margin-bottom: 16px; }
-.hc-hero-art { position: relative; }
-.hc-hero-art .art-panel { width: 84%; margin-left: auto; }
-.hc-hero-art .cutout { position: absolute; left: -2%; bottom: -12%; width: 38%; filter: drop-shadow(0 14px 14px rgba(40, 20, 10, 0.3)); }
-@media (min-width: 900px) { .hc-hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; } .hc-hero { padding: 64px 0 96px; } }
-
-.hc-steps { list-style: none; counter-reset: hc; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
-.hc-step {
-  counter-increment: hc;
-  position: relative;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 18px 18px 18px 96px;
-  min-height: 110px;
-  box-shadow: var(--glaze);
-}
-.hc-step strong { display: block; font-family: var(--display); color: var(--ink); font-size: 1.15rem; }
-.hc-step strong::before { content: counter(hc) ". "; color: var(--crust); }
-.hc-icon { position: absolute; left: 14px; top: 18px; width: 68px; height: 68px; background: var(--crust-soft); border-radius: 50%; display: grid; place-items: center; }
-.hc-icon img { width: 52px; height: 52px; object-fit: contain; }
+.tb-hero .store-status { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
 
 /* ---------- game cards (Games, About) ---------- */
 
@@ -696,9 +679,7 @@ main.main-wide { padding: 0 0 72px; }
 }
 .gc-art { position: relative; aspect-ratio: 16 / 10; border-radius: 20px; overflow: hidden; background: var(--bg-2); }
 .gc-art .panel-img { width: 100%; height: 100%; object-fit: cover; }
-.hc .gc-art .panel-img { object-position: 50% 70%; }
 .gc-char { position: absolute; bottom: 4%; left: 50%; transform: translateX(-50%); height: 78%; width: auto; filter: drop-shadow(0 10px 10px rgba(30, 20, 10, 0.3)); }
-.hc .gc-char { left: 26%; height: 86%; bottom: 2%; }
 .gc-body { padding: 16px 12px 12px; }
 .gc-body h2 { margin: 10px 0 6px; font-size: 1.7rem; }
 .gc-body h2 a { text-decoration: none; }
@@ -816,6 +797,7 @@ main.main-wide { padding: 0 0 72px; }
 @media (min-width: 1080px) { .foot-grid { grid-template-columns: 1.2fr 1.5fr 0.8fr 1fr; } }
 .foot-brand p { margin: 14px 0 0; }
 .foot-email { overflow-wrap: anywhere; }
+.foot-note { font-size: 0.92rem; opacity: 0.85; max-width: 32ch; }
 .foot-h { font: 800 0.95rem/1.2 var(--display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--foot-h); margin: 0 0 14px; }
 .foot-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .foot-links a { display: inline-block; padding: 6px 0; min-height: 36px; text-decoration: none; }
@@ -860,6 +842,12 @@ main.main-wide { padding: 0 0 72px; }
 /* three news cards (More news) sit in three columns, not a gapped four */
 @media (min-width: 900px) { .news-grid:has(> li:nth-child(3):last-child) { grid-template-columns: repeat(3, 1fr); } }
 
+/* Tumble: eight screenshots in even rows */
+.ads-note { margin-top: 18px; max-width: 70ch; }
+.promise-note { margin: 18px 0 8px; text-align: center; }
+@media (min-width: 700px) { .shots.shots-8 { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1100px) { .shots.shots-8 { grid-template-columns: repeat(4, 1fr); } }
+
 .not-found svg { width: 220px; height: auto; margin: 0 auto 10px; display: block; }
 </style>
 <script>
@@ -900,7 +888,7 @@ main.main-wide { padding: 0 0 72px; }
 <div class="wrap not-found">
 <svg role="img" aria-label="The studio cat, napping" xmlns="http://www.w3.org/2000/svg" width="48.0" height="44.0" viewBox="0 0 48.0 44.0"><defs><linearGradient id="cb" gradientUnits="userSpaceOnUse" x1="9" y1="3" x2="43" y2="48"><stop stop-color="#ffd59a"/><stop offset=".26" stop-color="#f6a453"/><stop offset=".6" stop-color="#e07b33"/><stop offset="1" stop-color="#8f4232"/></linearGradient><linearGradient id="cm" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#f3dcbf"/></linearGradient><linearGradient id="ce" x2=".7" y2="1"><stop stop-color="#fffdf0"/><stop offset=".7" stop-color="#fff8df"/><stop offset="1" stop-color="#d8c4b8"/></linearGradient><radialGradient id="ck"><stop stop-color="#f2877a" stop-opacity=".55"/><stop offset="1" stop-color="#f2877a" stop-opacity="0"/></radialGradient><radialGradient id="cs"><stop stop-color="#4a3a28" stop-opacity=".34"/><stop offset="1" stop-color="#4a3a28" stop-opacity="0"/></radialGradient><radialGradient id="cd"><stop stop-color="#5c2b2c" stop-opacity=".30"/><stop offset="1" stop-color="#5c2b2c" stop-opacity="0"/></radialGradient><linearGradient id="ch0" gradientUnits="userSpaceOnUse" x1="9" y1="3" x2="43" y2="48" gradientTransform="rotate(8.0) translate(-14.6 -31.4)"><stop stop-color="#ffd59a"/><stop offset=".26" stop-color="#f6a453"/><stop offset=".6" stop-color="#e07b33"/><stop offset="1" stop-color="#8f4232"/></linearGradient></defs><ellipse cx="24.0" cy="41.4" rx="12.8" ry="1.7" fill="#1e4b55" fill-opacity=".2"/><path d="M10 40.8C7.6 31 14 25 24 25C34.6 25 40 30.4 39 36.6C38.6 39.6 37 41 34 41.2Q22 42.4 10 40.8Z" fill="#8c4a24" stroke="#8c4a24" stroke-width="2.1" stroke-linejoin="round"/><path d="M37 37.6C34 41.6 22 42.4 16 40.4" fill="none" stroke="#8c4a24" stroke-width="5.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M-9.8 -3.6 L-9.2 -13.2 Q-8.2 -14.4 -7.0 -13.6 L-1.6 -6.6 Z" fill="#8c4a24" stroke="#8c4a24" stroke-width="2.1" stroke-linejoin="round" transform="translate(14.6 31.4) rotate(-8.0)"/><path d="M9.8 -3.6 L9.2 -13.2 Q8.2 -14.4 7.0 -13.6 L1.6 -6.6 Z" fill="#8c4a24" stroke="#8c4a24" stroke-width="2.1" stroke-linejoin="round" transform="translate(14.6 31.4) rotate(-8.0)"/><path d="M-11 0.8C-11 -6 -6 -9.6 0 -9.6C6 -9.6 11 -6 11 0.8C11 6.4 6 9.4 0 9.4C-6 9.4 -11 6.4 -11 0.8Z" fill="#8c4a24" stroke="#8c4a24" stroke-width="2.1" stroke-linejoin="round" transform="translate(14.6 31.4) rotate(-8.0)"/><path d="M10 40.8C7.6 31 14 25 24 25C34.6 25 40 30.4 39 36.6C38.6 39.6 37 41 34 41.2Q22 42.4 10 40.8Z" fill="url(#cb)"/><path d="M37 37.6C34 41.6 22 42.4 16 40.4" fill="none" stroke="url(#cb)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6 31C39.6 35 38.4 39.4 34.4 41C35.6 38 36.6 34.6 37.6 31Z" fill="#5c2b2c" opacity=".18"/><path d="M21 27.4Q23 30.4 22.4 33.6M25.4 26.6Q27.4 29.6 26.8 33M29.8 27.2Q31.6 30 31 33" fill="none" stroke="#c9692c" stroke-width=".8" stroke-linecap="round" opacity=".8"/><path d="M17 28.4C19.4 26.2 23 25.6 27 25.8C23.4 26.6 20.6 28 19 30.2C18 31 16.4 29.6 17 28.4Z" fill="#fff2da" opacity=".48"/><path d="M36.6 37.2C33.4 40.4 22 41 16.6 39.4" fill="none" stroke="#5c2b2c" stroke-width="1" stroke-linecap="round" opacity=".28" transform="translate(0 -2.1)"/><path d="M-9.8 -3.6 L-9.2 -13.2 Q-8.2 -14.4 -7.0 -13.6 L-1.6 -6.6 Z" fill="url(#ch0)" transform="translate(14.6 31.4) rotate(-8.0)"/><path d="M9.8 -3.6 L9.2 -13.2 Q8.2 -14.4 7.0 -13.6 L1.6 -6.6 Z" fill="url(#ch0)" transform="translate(14.6 31.4) rotate(-8.0)"/><path d="M-11 0.8C-11 -6 -6 -9.6 0 -9.6C6 -9.6 11 -6 11 0.8C11 6.4 6 9.4 0 9.4C-6 9.4 -11 6.4 -11 0.8Z" fill="url(#ch0)" transform="translate(14.6 31.4) rotate(-8.0)"/><g transform="translate(14.6 31.4) rotate(-8.0)"><path d="M-8.2 -6.4 L-8.0 -11.6 L-4.8 -8.4 Z" fill="#f4a39a" opacity=".9"/><path d="M8.2 -6.4 L8.0 -11.6 L4.8 -8.4 Z" fill="#f4a39a" opacity=".9"/><path d="M9.4 -1C10.8 4.6 7.2 8.4 2 9.1C6.4 6.8 8.8 3.6 9.4 -1Z" fill="#5c2b2c" opacity=".18"/><ellipse cx="0" cy="4.6" rx="5.4" ry="3.7" fill="url(#cm)"/><ellipse cx="-7.4" cy="4.2" rx="2.8" ry="1.9" fill="url(#ck)"/><ellipse cx="7.4" cy="4.2" rx="2.8" ry="1.9" fill="url(#ck)"/><path d="M0 -9V-6.4M-3 -8.6L-2.3 -6.2M3 -8.6L2.3 -6.2" fill="none" stroke="#c9692c" stroke-width=".8" stroke-linecap="round" opacity=".8"/><path d="M-6.9 -0.6Q-4.5 1.8 -2.1 -0.6" fill="none" stroke="#8c4a24" stroke-width="1.1" stroke-linecap="round"/><path d="M2.1 -0.6Q4.5 1.8 6.9 -0.6" fill="none" stroke="#8c4a24" stroke-width="1.1" stroke-linecap="round"/><path d="M-1.2 2.9H1.2Q0.9 4.3 0 4.5Q-0.9 4.3 -1.2 2.9Z" fill="#e9767a"/><path d="M-2 5.4Q-1 6.4 0 5.5Q1 6.4 2 5.4" fill="none" stroke="#a0583a" stroke-width=".75" stroke-linecap="round"/><path d="M-9.4 -1.6C-9 -5.8 -5.6 -8.4 -1.6 -8.6C-4.8 -7 -7 -4.6 -7.4 -1.2C-8.2 0 -9.6 -0.4 -9.4 -1.6Z" fill="#fff2da" opacity=".55"/><ellipse cx="-7.4" cy="-5" rx="1.3" ry=".62" transform="rotate(-48 -7.4 -5)" fill="#fffaf0" opacity=".6"/><path d="M3.6 -8.8C6.8 -8.4 9.4 -6 10 -3" fill="none" stroke="#ffd096" stroke-width=".9" stroke-linecap="round" opacity=".7"/></g></svg>
 <h1>Page not found</h1>
-<p class="lead">The studio cat looked all around the harbor, but there is no page at this address. She has gone back to sleep.</p>
+<p class="lead">The studio cat looked all around the harbor, but there’s no page at this address. She’s gone back to sleep.</p>
 <p><a class="button" href="./">Go to the home page</a></p>
 <p>Looking for a game’s documents? Try <a href="legal/">Legal</a> or <a href="support/">Support</a>.</p>
 </div>
