@@ -560,7 +560,6 @@ SHOTS = [
     ("level", "A level", "A level in progress: a board of glazed tiles marked with stars, leaves, shells and sails, the goals and 13 moves left at the top, and Otto watching from the quay."),
     ("level-cleared", "Level cleared", "The Level Cleared card: two gold stars, a basket of shells and +23 Shells earned, with a Continue button."),
     ("harbor-jar", "A Harbor Jar", "Opening a Harbor Jar at sunset: Otto grins beside the jar and a big shell shows +70 Shells."),
-    ("tide-race", "Tide Race", "The Tide Race: five club sailboats race across the harbor toward a finish line, with standings marked on the water."),
     ("profile", "Profile", "The Profile page under a painted night harbor: Otto's portrait on a pedestal with the harbor rank and a showcase for badges."),
 ]
 
