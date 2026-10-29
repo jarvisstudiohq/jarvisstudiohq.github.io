@@ -453,10 +453,10 @@ def news_cards(items, heading_level=3):
 def build_home():
     body = f"""<section class="hero" aria-labelledby="studio-name">
 <picture class="hero-art">
-<source media="(max-width: 1099px)" type="image/webp" srcset="{R}assets/img/home/hero-tall-450.webp?v=2 450w, {R}assets/img/home/hero-tall-900.webp?v=2 900w" sizes="100vw">
-<source media="(max-width: 1099px)" srcset="{R}assets/img/home/hero-tall-900.jpg?v=2 900w" sizes="100vw">
-<source type="image/webp" srcset="{R}assets/img/home/hero-wide-1200.webp?v=2 1200w, {R}assets/img/home/hero-wide-1800.webp?v=2 1800w, {R}assets/img/home/hero-wide-2400.webp?v=2 2400w" sizes="100vw">
-<img src="{R}assets/img/home/hero-wide-1200.jpg?v=2" srcset="{R}assets/img/home/hero-wide-1200.jpg?v=2 1200w, {R}assets/img/home/hero-wide-1800.jpg?v=2 1800w" sizes="100vw" width="2400" height="1200" alt="Otto the octopus and a phone showing Tumble, side by side on a sunny stone quay at golden hour, with the studio cat sitting between them and a harbor town behind" fetchpriority="high" decoding="async">
+<source media="(max-width: 1099px)" type="image/webp" srcset="{R}assets/img/home/hero-tall-450.webp?v=4 450w, {R}assets/img/home/hero-tall-900.webp?v=4 900w" sizes="100vw">
+<source media="(max-width: 1099px)" srcset="{R}assets/img/home/hero-tall-900.jpg?v=4 900w" sizes="100vw">
+<source type="image/webp" srcset="{R}assets/img/home/hero-wide-1200.webp?v=4 1200w, {R}assets/img/home/hero-wide-1800.webp?v=4 1800w, {R}assets/img/home/hero-wide-2400.webp?v=4 2400w" sizes="100vw">
+<img src="{R}assets/img/home/hero-wide-1200.jpg?v=4" srcset="{R}assets/img/home/hero-wide-1200.jpg?v=4 1200w, {R}assets/img/home/hero-wide-1800.jpg?v=4 1800w" sizes="100vw" width="2400" height="1200" alt="Otto the octopus on a sunny stone quay at golden hour beside two phones showing Turnstone and Tumble, with the studio cat sitting between them and a harbor town behind" fetchpriority="high" decoding="async">
 </picture>
 <div class="hero-copy">
 <h1 id="studio-name" class="toy-title">Jarvis Studios</h1>
@@ -1099,7 +1099,7 @@ def build_press():
     dl = "\n".join(f'<li><a href="{R}{p}" download><span class="doc-name">{esc(t)}</span><span class="doc-meta">{esc(m)}</span></a></li>' for t, p, m in downloads)
     body = f"""<h1>Press kit</h1>
 <p class="lead">Facts, art and screenshots for writing about {STUDIO} and our games.</p>
-<div class="press-hero">{pic("home/hero-wide", [1200, 1800], "(min-width: 1100px) 1048px, 92vw", "Otto the octopus and a phone showing Tumble on a sunny stone quay, with the studio cat between them", 2400, 1200, cls="panel-img")}</div>
+<div class="press-hero">{pic("home/hero-wide", [1200, 1800], "(min-width: 1100px) 1048px, 92vw", "Otto the octopus beside two phones showing Turnstone and Tumble on a sunny stone quay, with the studio cat between them", 2400, 1200, cls="panel-img")}</div>
 <section class="section" aria-labelledby="facts">
 <h2 id="facts">Studio fact sheet</h2>
 <dl class="fact-sheet">
