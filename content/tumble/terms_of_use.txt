@@ -12,7 +12,7 @@ By tapping Accept, or by playing, you agree to these Terms. Our Privacy Policy e
 
 # 2. Who can play
 
-Anyone can play Tumble. The first time you open the game, it asks your age once and keeps only an age group. The game uses that group to set itself up for you. For example, it decides whether an optional ad can be offered to you at all: players under 13, and anyone whose age group is not known, are never offered one.
+Anyone can play Tumble. The first time you open the game, it asks for your age once and keeps only an age group. The game uses that group to set itself up for you. For example, it decides whether an optional ad can be offered to you at all: players under 13, and anyone whose age group is not known, are never offered one.
 
 If you are under 18, please read these Terms with a parent or guardian and make sure they agree. Parents and guardians are responsible for how their children use the game, including anything bought with the family's store account.
 
@@ -32,7 +32,7 @@ Please do not:
 
 • use the game for anything unlawful.
 
-If you find a bug that gives an unfair advantage, please do not use it. The Daily Drop is the same puzzle for everyone on a given day and has one ranked attempt a day. It has no ads, and nothing you can buy or earn from coins can be used in it.
+If you find a bug that gives an unfair advantage, please do not use it. The Daily Drop is the same puzzle for everyone on a given day and has one ranked attempt a day. It has no ads, and nothing bought with money or coins can be used in it.
 
 # 5. Scores and the Daily Drop
 
@@ -54,7 +54,7 @@ Ads, coin packs and Remove ads are not on yet. This version of Tumble does not s
 
 When they are on, this is how they work.
 
-Optional ads. Tumble has only ads you choose to watch (rewarded ads):
+Optional ads. Tumble's ads are ones you choose to watch (rewarded ads):
 
 • "Keep going" in a Classic run: after a run ends, you may watch a short ad to take back your last drop and carry on, once per run.
 
@@ -74,7 +74,7 @@ These rules are part of how the game is built, and they will not change:
 
 • Money never buys a win, a score or a rank.
 
-• Nothing paid can be used in the ranked Daily Drop, and the Daily Drop has no ads.
+• Nothing paid can be used in the Daily Drop, and the Daily Drop has no ads.
 
 # 8. Our game and our rights
 

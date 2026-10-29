@@ -321,7 +321,7 @@ TS_PITCH = ("Turnstone is a cozy tile puzzle set in a sunny harbor town, starrin
             "and hopes you won't be either. It's turn-based and made for one thumb: tap a tile to flip the path between two matching "
             "Twins, and three or more matching tiles clear. Take your time. There are no timers, no lives and no energy, so nothing "
             "ever makes you wait to keep playing.")
-TB_PITCH = ("Tumble is a drop-and-fuse block puzzle for one thumb, played in portrait. Tetris-shaped pieces drop into a well. "
+TB_PITCH = ("Tumble is a drop-and-fuse block puzzle for one thumb, played in portrait. Block pieces drop into a well. "
             "When two pieces of the same size touch, they fuse into a bigger one, and fused pieces can chain. Full rows clear, "
             "and two of the biggest pieces make a Tumble.")
 
@@ -374,7 +374,7 @@ NEWS = [
         "thumb_alt": "Two phones on a purple background: Tumble's Home screen with its candy-colored logo, and a board where two giant blocks have just made a Tumble",
         "summary": "Our second game is a bright drop-and-fuse block puzzle for one thumb. It's still in development, and here's what we can share.",
         "body": f"""<p class="lead">Our second game is Tumble, a bright drop-and-fuse block puzzle for one thumb. It's still in development.</p>
-<p>Tetris-shaped pieces drop into a well. When two pieces of the same size touch, they fuse into a bigger one, and fused pieces can chain. Full rows clear, and two of the biggest pieces make a Tumble.</p>
+<p>Block pieces drop into a well. When two pieces of the same size touch, they fuse into a bigger one, and fused pieces can chain. Full rows clear, and two of the biggest pieces make a Tumble.</p>
 <p>A rising floor slowly pushes the rows up, but a meter and a preview always show it coming, so it's never a surprise. Classic is endless. The Daily Drop is the same puzzle for everyone, each day. Drag to aim, let go to drop, and collect candy-bright looks for your blocks along the way.</p>
 <p>Tumble will be free to play, supported by ads and optional in-app purchases. They aren't switched on yet, and the Daily Drop will never have anything paid in it.</p>
 <p>Tumble isn't in the stores yet, and it has no release date.</p>
@@ -1118,7 +1118,7 @@ def build_press():
 <dl class="fact-sheet">
 <div><dt>Game</dt><dd>Tumble, a portrait drop-and-fuse block puzzle</dd></div>
 <div><dt>Status</dt><dd>In development. Coming soon to iOS and Android, with no release date yet.</dd></div>
-<div><dt>How it works</dt><dd>Tetris-shaped pieces drop into a well. Two pieces of the same size fuse into a bigger one (size is the tier), and fused pieces can chain. Full rows clear, and two of the biggest make a Tumble.</dd></div>
+<div><dt>How it works</dt><dd>Block pieces drop into a well. Two pieces of the same size fuse into a bigger one (size is the tier), and fused pieces can chain. Full rows clear, and two of the biggest make a Tumble.</dd></div>
 <div><dt>Rising floor</dt><dd>A floor slowly pushes the rows up, with a meter and a preview so it’s never a surprise.</dd></div>
 <div><dt>Modes</dt><dd>Classic, which is endless, and the Daily Drop, the same puzzle for everyone each day</dd></div>
 <div><dt>Controls</dt><dd>One thumb: drag to aim, let go to drop</dd></div>
