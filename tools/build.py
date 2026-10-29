@@ -453,10 +453,10 @@ def news_cards(items, heading_level=3):
 def build_home():
     body = f"""<section class="hero" aria-labelledby="studio-name">
 <picture class="hero-art">
-<source media="(max-width: 1099px)" type="image/webp" srcset="{R}assets/img/home/hero-tall-450.webp 450w, {R}assets/img/home/hero-tall-900.webp 900w" sizes="100vw">
-<source media="(max-width: 1099px)" srcset="{R}assets/img/home/hero-tall-900.jpg 900w" sizes="100vw">
-<source type="image/webp" srcset="{R}assets/img/home/hero-wide-1200.webp 1200w, {R}assets/img/home/hero-wide-1800.webp 1800w, {R}assets/img/home/hero-wide-2400.webp 2400w" sizes="100vw">
-<img src="{R}assets/img/home/hero-wide-1200.jpg" srcset="{R}assets/img/home/hero-wide-1200.jpg 1200w, {R}assets/img/home/hero-wide-1800.jpg 1800w" sizes="100vw" width="2400" height="1200" alt="Otto the octopus and a phone showing Tumble, side by side on a sunny stone quay at golden hour, with the studio cat sitting between them and a harbor town behind" fetchpriority="high" decoding="async">
+<source media="(max-width: 1099px)" type="image/webp" srcset="{R}assets/img/home/hero-tall-450.webp?v=2 450w, {R}assets/img/home/hero-tall-900.webp?v=2 900w" sizes="100vw">
+<source media="(max-width: 1099px)" srcset="{R}assets/img/home/hero-tall-900.jpg?v=2 900w" sizes="100vw">
+<source type="image/webp" srcset="{R}assets/img/home/hero-wide-1200.webp?v=2 1200w, {R}assets/img/home/hero-wide-1800.webp?v=2 1800w, {R}assets/img/home/hero-wide-2400.webp?v=2 2400w" sizes="100vw">
+<img src="{R}assets/img/home/hero-wide-1200.jpg?v=2" srcset="{R}assets/img/home/hero-wide-1200.jpg?v=2 1200w, {R}assets/img/home/hero-wide-1800.jpg?v=2 1800w" sizes="100vw" width="2400" height="1200" alt="Otto the octopus and a phone showing Tumble, side by side on a sunny stone quay at golden hour, with the studio cat sitting between them and a harbor town behind" fetchpriority="high" decoding="async">
 </picture>
 <div class="hero-copy">
 <h1 id="studio-name" class="toy-title">Jarvis Studios</h1>
