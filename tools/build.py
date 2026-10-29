@@ -199,9 +199,9 @@ def footer_html(rel):
 <div class="wrap foot-grid">
 <div class="foot-brand">
 <a class="wordmark on-dark" href="{home}" aria-label="{STUDIO}, home"><span class="wm-top" aria-hidden="true">JARVIS</span><span class="wm-bottom" aria-hidden="true">STUDIOS</span></a>
-<p>Hand-made games for one thumb.</p>
+<p>Handmade games for one thumb.</p>
 <p class="foot-email">Support: {email_link()}</p>
-<p class="foot-note">Our games are free to play, supported by ads and optional in-app purchases.</p>
+<p class="foot-note">Our games are free to play, supported by ads and optional in-app purchases, which aren’t switched on yet.</p>
 </div>
 <div class="foot-col foot-stores"><h2 class="foot-h">Get our games</h2>{badges}</div>
 <div class="foot-col"><h2 class="foot-h">Studio</h2><ul class="foot-links">
@@ -227,6 +227,17 @@ def footer_html(rel):
 </footer>""".replace(R, rel)
 
 
+def curly(markup):
+    """Typographic apostrophes in visible text and in alt and caption text (never in scripts or the verbatim legal text)."""
+    parts = re.split(r"(<[^>]*>)", markup)
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            parts[i] = re.sub(r'((?:alt|data-caption)="[^"]*")', lambda m: m.group(1).replace("'", "’").replace("&#x27;", "’"), part)
+        else:
+            parts[i] = part.replace("'", "’").replace("&#x27;", "’")
+    return "".join(parts)
+
+
 def page(path, title, description, nav, body, crumbs=None, wide=False, body_class=""):
     """path: the output folder relative to the site root ("" for the home page, "turnstone/privacy/" ...).
     wide=True: the body brings its own full-width sections (and .wrap where it wants one)."""
@@ -245,6 +256,9 @@ def page(path, title, description, nav, body, crumbs=None, wide=False, body_clas
                              f'<li><a href="{home}">{esc(label)}</a></li>')
         crumb_html = f'<nav class="breadcrumb" aria-label="Breadcrumb"><ol>{"".join(items)}</ol></nav>\n'
     inner = body.replace(R, rel).replace("{home}", home)
+    if 'class="legal-doc"' not in inner:
+        inner = curly(inner)
+        description = description.replace("'", "’")
     if wide:
         cw = f'<div class="wrap crumb-wrap">{crumb_html}</div>\n' if crumb_html else ""
         main = f'<main id="main" tabindex="-1" class="main-wide">\n{cw}{inner}\n</main>'
@@ -303,7 +317,7 @@ def stamp(version, date, label="Version"):
 
 # ---------------------------------------------------------------- shared copy
 
-TS_PITCH = ("Turnstone is a cozy tile puzzle set in a sunny harbor town, starring Otto, a round purple octopus who's never in a hurry, "
+TS_PITCH = ("Turnstone is a cozy tile puzzle set in a sunny harbor town, starring Otto, a round purple octopus who's never in a hurry "
             "and hopes you won't be either. It's turn-based and made for one thumb: tap a tile to flip the path between two matching "
             "Twins, and three or more matching tiles clear. Take your time. There are no timers, no lives and no energy, so nothing "
             "ever makes you wait to keep playing.")
@@ -313,8 +327,9 @@ TB_PITCH = ("Tumble is a drop-and-fuse block puzzle for one thumb, played in por
 
 # The studio's plain statement about ads and purchases (the games' own Terms and Privacy Policy are the full text).
 ADS_LINE = "Our games are free to play, supported by ads and optional in-app purchases."
-ADS_DETAIL = ("Ads and purchases are not switched on yet. When they are, ads are optional rewarded ads. We may later add an occasional ad "
-              "between runs in Tumble's Classic mode. Ads never appear in a ranked Daily, and Remove ads is available.")
+ADS_DETAIL = ("Ads and purchases are not switched on yet. When they are, ads will be optional rewarded ads. We may later add an occasional ad "
+              "between runs in Classic mode. Ads will never appear in the Daily Drop, and Remove ads will be available. Players under 13 are not offered "
+              "rewarded ads and never see personalized ads.")
 
 PAGE_DATE = "2026-10-27"    # the date the support, deletion and placeholder pages were written
 SUPPORT_VERSION = 1
@@ -357,8 +372,8 @@ NEWS = [
         "tag": "Tumble", "tag_class": "grape",
         "date": "2026-10-29",
         "thumb_alt": "Two phones on a purple background: Tumble's Home screen with its candy-colored logo, and a board where two giant blocks have just made a Tumble",
-        "summary": "Our second game is a bright, drop-and-fuse block puzzle for one thumb. It's still in development, and here's what we can share.",
-        "body": f"""<p class="lead">Our second game is Tumble, a bright, drop-and-fuse block puzzle for one thumb. It's still in development.</p>
+        "summary": "Our second game is a bright drop-and-fuse block puzzle for one thumb. It's still in development, and here's what we can share.",
+        "body": f"""<p class="lead">Our second game is Tumble, a bright drop-and-fuse block puzzle for one thumb. It's still in development.</p>
 <p>Tetris-shaped pieces drop into a well. When two pieces of the same size touch, they fuse into a bigger one, and fused pieces can chain. Full rows clear, and two of the biggest pieces make a Tumble.</p>
 <p>A rising floor slowly pushes the rows up, but a meter and a preview always show it coming, so it's never a surprise. Classic is endless. The Daily Drop is the same puzzle for everyone, each day. Drag to aim, let go to drop, and collect candy-bright looks for your blocks along the way.</p>
 <p>Tumble will be free to play, supported by ads and optional in-app purchases. They aren't switched on yet, and the Daily Drop will never have anything paid in it.</p>
@@ -372,7 +387,7 @@ NEWS = [
         "date": "2026-10-27",
         "thumb_alt": "Otto the octopus grinning on a sunny stone quay, with the harbor town across the water behind him",
         "summary": "Our first game is a cozy, turn-based tile puzzle in a sunny harbor town, starring Otto the octopus.",
-        "body": f"""<p class="lead">Turnstone is our first game: a cozy tile puzzle set in a sunny harbor town, starring Otto, a round purple octopus who's never in a hurry, and hopes you won't be either.</p>
+        "body": f"""<p class="lead">Turnstone is our first game: a cozy tile puzzle set in a sunny harbor town, starring Otto, a round purple octopus who's never in a hurry and hopes you won't be either.</p>
 <p>Every level is a board of glazed tiles marked with stars, leaves, shells and sails. Tap a tile to flip the path between two matching Twins, and three or more matching tiles clear. It's turn-based and made for one thumb, so it plays just as well on the bus, in line or in bed.</p>
 <h2>What we promise</h2>
 <ul>
@@ -409,7 +424,7 @@ NEWS = [
         "body": f"""<p class="lead">We want Turnstone to be a game you can trust with your evening.</p>
 <p>So it has no lives and no energy: you can always play another level, and nothing makes you wait. There are no timers either. Every move waits for you.</p>
 <p>The Daily puzzle is the same board for everyone, and it's played without Tools, so nothing you can buy helps you on it. Stars, the record of how well you played a level, are never for sale.</p>
-<p>Turnstone will be free to play, supported by ads and optional in-app purchases. Neither is switched on in this version, which shows no ads and sells nothing for real money. When they arrive, ads will be optional rewarded ads, they will never appear in the ranked Daily, and a Remove ads purchase will be available. The Terms of Use and Privacy Policy will be updated first, and the game will ask you to accept them again.</p>
+<p>Turnstone will be free to play, supported by ads and optional in-app purchases. Neither is switched on in this version, which shows no ads and sells nothing for real money. When they arrive, ads will be optional rewarded ads, they will never appear in the ranked Daily, and a Remove ads purchase will be available. Players under 13 will see no ads at all, and no one under 18 will see personalized ads. The Terms of Use and Privacy Policy will be updated first, and the game will ask you to accept them again.</p>
 <p><a class="button" href="{R}turnstone/">See Turnstone</a></p>""",
     },
 ]
@@ -506,7 +521,7 @@ def build_home():
 </div>
 </div>
 </section>"""
-    page("", STUDIO, f"{STUDIO} makes hand-made games for one thumb. Home of Turnstone and Tumble.", "home", body,
+    page("", STUDIO, f"{STUDIO} makes handmade games for one thumb. Home of Turnstone and Tumble.", "home", body,
          wide=True, body_class="home")
 
 
@@ -610,7 +625,7 @@ def build_turnstone():
 <div>
 <h2 id="see-it">See it move</h2>
 <p id="video-desc">Four seconds of play from a test build, with no sound: a big clear of red shells, then a chain of special tiles that sweeps the whole board.</p>
-<p class="muted small">The video does not play by itself. Press play to watch it.</p>
+<p class="muted small">The video doesn't play by itself. Press play to watch it.</p>
 </div>
 </section>
 
@@ -665,14 +680,14 @@ def build_delete_data():
 <li>Settings, quests, achievements and stats</li>
 <li>Level drafts and boards you made on this device</li>
 </ul>
-It also says: “This version of Turnstone has no online account. Everything it keeps is on this device, so nothing is stored on a server.” and “This cannot be undone. Afterwards Turnstone starts again from the first level.” Tap <span class="ui-label">Delete my data</span> to go on, or <span class="ui-label">Keep my data</span> to leave.</li>
+It also says: “This version of Turnstone has no online account. Everything it keeps is on this device, so nothing is stored on a server.” and “This cannot be undone. Afterwards Turnstone starts again from the first level.” Tap <span class="ui-label">Delete my data</span> to continue, or <span class="ui-label">Keep my data</span> to stop.</li>
 <li>The game asks “Are you sure?” Tap <span class="ui-label">Yes, delete everything</span>, or <span class="ui-label">Cancel</span>.</li>
 <li>The game shows “Turnstone has erased its data from this device.” and “There was no online account to delete.”
 <ul>
 <li>On Android, tap <span class="ui-label">Close Turnstone</span>.</li>
 <li>On iPhone and iPad, close it yourself: swipe up from the bottom edge and swipe Turnstone away.</li>
 </ul></li>
-<li>The next time you open Turnstone, it starts fresh, as if it were newly installed: it asks your age, shows the Terms, and begins at the first level.</li>
+<li>The next time you open Turnstone, it starts fresh, as if it were newly installed: it asks for your age, shows the Terms, and begins at the first level.</li>
 </ol>
 
 <h2 id="if-it-fails">If something could not be erased</h2>
@@ -716,7 +731,7 @@ def turnstone_faq():
 </details>
 <details>
 <summary>Are there ads or purchases?</summary>
-<div><p>Turnstone will be free to play, supported by ads and optional in-app purchases. This version shows no ads and sells nothing for real money. When they arrive, ads will be optional rewarded ads, they will never appear in the ranked Daily, and a Remove ads purchase will be available. The Terms of Use and Privacy Policy will be updated first, and the game will ask you to accept them again.</p></div>
+<div><p>Turnstone will be free to play, supported by ads and optional in-app purchases. This version shows no ads and sells nothing for real money. When they arrive, ads will be optional rewarded ads, they will never appear in the ranked Daily, and a Remove ads purchase will be available. Players under 13 will see no ads at all, and no one under 18 will see personalized ads. The Terms of Use and Privacy Policy will be updated first, and the game will ask you to accept them again.</p></div>
 </details>
 <details>
 <summary>Why does the game ask my age?</summary>
@@ -744,7 +759,7 @@ def build_turnstone_support():
 <h2 class="section">Documents</h2>
 {turnstone_docs_list()}
 </article>"""
-    page("turnstone/support/", "Support · Turnstone", "Help with Turnstone: contact, deleting your data, and common questions.", "support", body,
+    page("turnstone/support/", "Support · Turnstone", "Help with Turnstone: contact, deleting your data and common questions.", "support", body,
          crumbs=[("Home", ""), ("Support", "support/"), ("Turnstone", None)])
 
 
@@ -810,7 +825,7 @@ def build_tumble():
         f'{pic("tumble/shot-" + n, [390, 780], "(min-width: 1100px) 170px, (min-width: 700px) 30vw, 58vw", alt, 390, 844, fallback_w=390)}'
         f'<span class="shot-cap">{cap}</span></a></li>' for n, cap, alt in TB_SHOTS)
     features = [
-        ("One thumb, drag and drop", "Drag to aim, let go to drop. Portrait, and playable with one hand.", "tap"),
+        ("One thumb, drag and drop", "Drag to aim, let go to drop. It plays in portrait, with one hand.", "tap"),
         ("Fuse and chain", "Two pieces of the same size fuse into a bigger one. Fused pieces can chain.", "star"),
         ("Never a surprise", "A rising floor pushes the rows up, and a meter and a preview show it coming.", "sun"),
         ("Classic and Daily Drop", "Classic is endless. The Daily Drop is the same puzzle for everyone, with nothing paid.", "heart"),
@@ -888,7 +903,7 @@ def build_tumble_delete_data():
 <li>Your coins and the looks you own</li>
 <li>Your ads and purchases file (Remove ads, ad counters)</li>
 </ul>
-It also says “This cannot be undone. Afterwards Tumble starts again as if it was just installed.” Tap <span class="ui-label">Delete my data</span> to go on, or <span class="ui-label">Keep my data</span> to leave.</li>
+It also says “This cannot be undone. Afterwards Tumble starts again as if it was just installed.” Tap <span class="ui-label">Delete my data</span> to continue, or <span class="ui-label">Keep my data</span> to stop.</li>
 <li>The game asks “Are you sure?” Tap <span class="ui-label">Yes, delete everything</span>, or <span class="ui-label">Cancel</span>.</li>
 <li>The game shows “Tumble has erased its data from this device.” and “There was no online account to delete.”
 <ul>
@@ -905,7 +920,7 @@ It also says “This cannot be undone. Afterwards Tumble starts again as if it w
 <ul>
 <li>Uninstalling the game also removes its data from your device.</li>
 <li>Your device’s own backups (for example, a phone backup you made) may keep a copy until they’re replaced.</li>
-<li>Deleting your data doesn’t undo a purchase. Apple or Google keep their own record of what you bought, and Restore purchases can give you Remove ads again. It can’t bring back coins you’ve already spent or lost.</li>
+<li>Deleting your data doesn’t undo a purchase. Apple and Google each keep their own record of what you bought, and Restore purchases can give you Remove ads again. It can’t bring back coins you’ve already spent or lost.</li>
 <li>Because this version has no account and stores nothing with us, there’s nothing on our side to delete.</li>
 </ul>
 
@@ -936,7 +951,7 @@ def tumble_faq():
 </details>
 <details>
 <summary>Are there ads? What do Remove ads and Restore purchases do?</summary>
-<div><p>Tumble will be free to play, supported by ads and optional in-app purchases. Ads, coin packs and Remove ads aren’t switched on yet. When they are, ads are optional rewarded ads (such as “Keep going” or free coins). We may later add an occasional ad between runs in Classic, which Remove ads would remove. They never appear in the Daily Drop. Players under 13, and anyone whose age group isn’t known, aren’t offered rewarded ads and never see personalized ads.</p>
+<div><p>Tumble will be free to play, supported by ads and optional in-app purchases. Ads, coin packs and Remove ads aren’t switched on yet. When they are, ads will be optional rewarded ads (such as “Keep going” or free coins). We may later add an occasional ad between runs in Classic, which Remove ads would remove. Ads never appear in the Daily Drop. Players under 13, and anyone whose age group isn’t known, aren’t offered rewarded ads and never see personalized ads.</p>
 <p><span class="ui-label">Remove ads</span> takes away the ads you didn’t choose, and the optional ones stay yours to pick. If you bought it before, <span class="ui-label">Restore purchases</span> in Settings gets it back on this device. It can’t bring back coins you’ve already spent or lost.</p></div>
 </details>
 <details>
@@ -973,7 +988,7 @@ def build_tumble_support():
 <h2 class="section">Documents</h2>
 {tumble_docs_list()}
 </article>"""
-    page("tumble/support/", "Support · Tumble", "Help with Tumble: how to play, the Daily Drop, coins and looks, ads and purchases, deleting your data, and contact.", "support", body,
+    page("tumble/support/", "Support · Tumble", "Help with Tumble: how to play, the Daily Drop, coins and looks, ads and purchases, deleting your data and contact.", "support", body,
          crumbs=[("Home", ""), ("Support", "support/"), ("Tumble", None)])
 
 
@@ -1012,7 +1027,7 @@ def build_about():
     body = f"""<div class="about-head">
 <div>
 <h1>About the studio</h1>
-<p class="lead">{STUDIO} is a small, independent studio that makes hand-made games for phones: warm, readable and played with one thumb.</p>
+<p class="lead">{STUDIO} is a small, independent studio that makes handmade games for phones: warm, readable and played with one thumb.</p>
 </div>
 {cat("look", "cat-about", "The studio cat, a ginger cat sitting up and looking at you")}
 </div>
@@ -1022,7 +1037,7 @@ def build_about():
 <ul>
 <li><strong>Kind to your time.</strong> No lives, no energy, and no timers that make you wait or hurry.</li>
 <li><strong>Fair.</strong> Nothing you can buy wins for you, and every ranked Daily is the same for everyone.</li>
-<li><strong>Honest about money.</strong> Our games are free to play, supported by ads and optional in-app purchases. They aren’t switched on yet. When they are, ads are mostly optional ones you choose to watch, and they never appear in a ranked Daily.</li>
+<li><strong>Honest about money.</strong> Our games are free to play, supported by ads and optional in-app purchases. They aren’t switched on yet. When they are, ads will be ones you choose to watch, with perhaps an occasional ad between runs in Tumble’s Classic mode. Ads will never appear in a ranked Daily, and there will be a Remove ads purchase.</li>
 <li><strong>Readable.</strong> Color is never the only clue, and text sizes can grow.</li>
 <li><strong>Private.</strong> We collect as little as we can, and we say exactly what, in plain words.</li>
 </ul>
@@ -1092,9 +1107,9 @@ def build_press():
 <div><dt>Studio</dt><dd>{STUDIO}, an independent game studio</dd></div>
 <div><dt>Games</dt><dd><a href="{R}turnstone/">Turnstone</a> (tile puzzle) and <a href="{R}tumble/">Tumble</a> (block puzzle)</dd></div>
 <div><dt>Platforms</dt><dd>iOS and Android (Turnstone and Tumble coming soon)</dd></div>
-<div><dt>Business model</dt><dd>Free to play, supported by ads and optional in-app purchases. Not switched on yet. Never in a ranked Daily.</dd></div>
+<div><dt>Business model</dt><dd>Free to play, supported by ads and optional in-app purchases, which aren’t switched on yet. Nothing paid in a ranked Daily.</dd></div>
 <div><dt>Characters</dt><dd>Otto, a round purple octopus (Turnstone), and the studio cat</dd></div>
-<div><dt>In one line</dt><dd>Hand-made games for one thumb: portrait, taps or drags only, no lives, no energy, nothing that wins for you.</dd></div>
+<div><dt>In one line</dt><dd>Handmade games for one thumb: portrait, taps or drags only, no lives, no energy, nothing that wins for you.</dd></div>
 <div><dt>Press contact</dt><dd>{email_link("Press")}</dd></div>
 </dl>
 </section>
@@ -1108,7 +1123,7 @@ def build_press():
 <div><dt>Modes</dt><dd>Classic, which is endless, and the Daily Drop, the same puzzle for everyone each day</dd></div>
 <div><dt>Controls</dt><dd>One thumb: drag to aim, let go to drop</dd></div>
 <div><dt>Look</dt><dd>Bright candy blocks, with looks to collect</dd></div>
-<div><dt>Price</dt><dd>Free to play, supported by ads and optional in-app purchases (optional rewarded ads, possibly an occasional ad between runs in Classic later, never in the ranked Daily, and Remove ads)</dd></div>
+<div><dt>Price</dt><dd>Free to play, supported by ads and optional in-app purchases (optional rewarded ads, possibly an occasional ad between runs in Classic later, and a Remove ads purchase; never in the Daily Drop)</dd></div>
 <div><dt>Details</dt><dd><a href="{R}tumble/">Game page</a> · <a href="{R}tumble/privacy/">Privacy Policy</a> · <a href="{R}tumble/terms/">Terms of Use</a></dd></div>
 </dl>
 </section>
