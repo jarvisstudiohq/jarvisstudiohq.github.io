@@ -561,6 +561,9 @@ main.main-wide { padding: 0 0 72px; }
   .game-hero-copy .store-badges { justify-content: flex-start; }
   .game-hero-char { width: min(100%, 400px); align-self: end; margin-bottom: 2%; }
 }
+.ts-hero-art { position: relative; z-index: 1; display: grid; place-items: center; padding: 28px 0 56px; }
+.ts-icon { width: min(60%, 300px); height: auto; border-radius: 22%; box-shadow: 0 18px 36px rgba(10, 30, 40, 0.45), 0 0 0 5px #fffaf0; transform: rotate(-4deg); }
+@media (min-width: 860px) { .ts-hero-art { grid-column: 2; grid-row: 1; padding: 0; } .ts-icon { width: min(80%, 300px); } }
 .ts-hero::after {
   content: "";
   position: absolute;
